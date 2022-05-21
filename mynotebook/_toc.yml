@@ -3,7 +3,18 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
+parts:
+  - caption: cheatsheets
+    chapters:
+      - file: cheatsheets/pyenv
+  
+  - caption: Android development
+    chapters:
+      - file: android_dev/kotlin
+      - file: android_dev/flutter
+
+  - caption: jupyterbook samples
+    chapters:
+    - file: sample_content/markdown
+    - file: sample_content/notebooks
+    - file: sample_content/markdown-notebooks
