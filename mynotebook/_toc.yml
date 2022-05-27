@@ -7,6 +7,7 @@ parts:
   - caption: cheatsheets
     chapters:
       - file: cheatsheets/pyenv
+      - file: cheatsheets/git.md
   
   - caption: Android development
     chapters:

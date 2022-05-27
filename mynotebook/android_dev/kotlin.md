@@ -2,7 +2,7 @@
 
 ## Déclaration d'une variable
 En Kotlin, les variables sont typées.
-```{code-cell}
+```
 var nomVariable: Type
 ```
 Les types:
@@ -14,7 +14,7 @@ Les types:
 - Caratère: Char (e.g. 'a','b')
 - Chaine de caractères: String (e.g. "hello")
 
-```{code-cell}
+```
 fun main() {
     var age: Int=5
     var name: String="Joe"
@@ -50,22 +50,23 @@ fun main() {
 | En francais | En Kotlin |
 | ----------- | ----------- |
 | Et | && |
-| Ou | || |
+| Ou | \|\| |
 | Non | ! |
 
-```{code-cell}
+```
 if (condition) {
     //code
 }
 ```
-```{code-cell}
+
+```
 if (condition1 et condition2) {
     //code
 }
 ```
 
 ### Exemple:
-```{code-cell}
+```
 var age: Int = 10
 if (age > 5 && age < 15) {
     println("")
