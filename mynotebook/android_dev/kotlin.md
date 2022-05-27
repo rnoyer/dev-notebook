@@ -1,9 +1,11 @@
 # Kotlin language
 
-variables typés:
+## Déclaration d'une variable
+En Kotlin, les variables sont typées.
+```{code-cell}
 var nomVariable: Type
-
-Les types
+```
+Les types:
 - Nombres entier : Byte, Short, Int, Long
 - Nombre décimal: Float, Double
 - N'importe quel type de nombre: Number
@@ -29,5 +31,43 @@ fun main() {
     		>	Nom: $name
             >	Age: $age
     """.trimMargin(">"))
+}
+```
+## Controle de flux
+### if/else
+
+### Comparateurs
+| En francais | En Kotlin |
+| ----------- | ----------- |
+| Egal | == |
+| Différent | != |
+| Strictement supérieur | > |
+| Strictement inférieur | < |
+| Supérieur ou égal | >= |
+| Inférieur ou égal | <= |
+
+### Opérateurs booléens
+| En francais | En Kotlin |
+| ----------- | ----------- |
+| Et | && |
+| Ou | || |
+| Non | ! |
+
+```{code-cell}
+if (condition) {
+    //code
+}
+```
+```{code-cell}
+if (condition1 et condition2) {
+    //code
+}
+```
+
+### Exemple:
+```{code-cell}
+var age: Int = 10
+if (age > 5 && age < 15) {
+    println("")
 }
 ```
