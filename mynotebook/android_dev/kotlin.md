@@ -34,8 +34,6 @@ fun main() {
 }
 ```
 ## Controle de flux
-### if/else
-
 ### Comparateurs
 | En francais | En Kotlin |
 | ----------- | ----------- |
@@ -45,6 +43,7 @@ fun main() {
 | Strictement inférieur | < |
 | Supérieur ou égal | >= |
 | Inférieur ou égal | <= |
+|Adresse egale à | === |
 
 ### Opérateurs booléens
 | En francais | En Kotlin |
@@ -53,6 +52,7 @@ fun main() {
 | Ou | \|\| |
 | Non | ! |
 
+### if/else
 ```
 if (condition) {
     //code
@@ -65,10 +65,11 @@ if (condition1 et condition2) {
 }
 ```
 
-### Exemple:
+#### Exemple:
 ```
 var age: Int = 10
 if (age > 5 && age < 15) {
     println("")
 }
 ```
+### when
