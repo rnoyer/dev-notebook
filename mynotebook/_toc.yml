@@ -7,8 +7,15 @@ parts:
   - caption: cheatsheets
     chapters:
       - file: cheatsheets/pyenv
-      - file: cheatsheets/git.md
-  
+      - file: cheatsheets/git
+
+  - caption: HTML/CSS
+    chapters:
+      - file: html_css_dev/html_basics
+      - file: html_css_dev/css_basics
+      - file: html_css_dev/html_boilerplate
+      - file: html_css_dev/filepaths_basics
+
   - caption: Android development
     chapters:
       - file: android_dev/kotlin
