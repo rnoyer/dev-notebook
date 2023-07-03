@@ -4,6 +4,7 @@
 A tag refers to contents in angle-brackets
 An Element refers to the tags (opening and closing tags) and the content between them.
 ```html
+<!-- HTML file -->
 <h1> Heading 1 </h1>
 ```
 <hr />
@@ -19,6 +20,7 @@ An Element refers to the tags (opening and closing tags) and the content between
 ## Lists
 ### Unordered list: Create a raw bullet points list
 ```html
+<!-- HTML file -->
 <ul>
 	<li>list item 1</li>
 	<li>list item 2</li>
@@ -34,6 +36,7 @@ The rendered output looks like this:
 
 ### Ordered list: Create a raw numbered list:
 ```html
+<!-- HTML file -->
 <ol>
 	<li>list item 1</li>
 	<li>list item 2</li>
@@ -51,6 +54,7 @@ List nesting : Les listes s'imbriquent les unes dans les autres en les placant Ã
 
 Exemple:
 ```html
+<!-- HTML file -->
 <ul>
     <li>01 Liste principale</li>
     <li>02 Liste principale</li>
@@ -81,6 +85,7 @@ The rendered output looks like this:
 Anchor element allow the text to be enhanced with attributes, such as hyperlinks.
 
 ```html
+<!-- HTML file -->
 <a href="https://www.google.com">Enhanced text with an hyperlink reference (href)</a>
 ```
 The rendered output looks like this:
@@ -97,5 +102,6 @@ Attributes:
 - etc.
 
 ```html
+<!-- HTML file -->
 <img src="https://picsum.photos/100" alt="randomly generated photo"/>
 ```
