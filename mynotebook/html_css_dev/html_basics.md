@@ -1,8 +1,8 @@
 # HTML Basics
 
 ## Tags vs. Element
-A tag refers to contents in angle-brackets
-An Element refers to the tags (opening and closing tags) and the content between them.
+- A tag refers to contents in angle-brackets
+- An Element refers to the tags (opening and closing tags) and the content between them.
 ```html
 <!-- HTML file -->
 <h1> Heading 1 </h1>
@@ -10,7 +10,7 @@ An Element refers to the tags (opening and closing tags) and the content between
 <hr />
 
 ## Main HTML tags (Balises HTML)
-- Headings tags (Balises de titres) goes from \<h1>\</h1> to \<h6>\</h6>.
+- Heading tags (Balises de titres) goes from \<h1>\</h1> to \<h6>\</h6>.
 - Paragraph tag: \<p> \</p>
 - void elements:
   - Horizontal Rule: \<hr />
