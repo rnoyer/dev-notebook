@@ -12,7 +12,10 @@ parts:
   - caption: HTML/CSS
     chapters:
       - file: html_css_dev/html_basics
-      - file: html_css_dev/css_basics
+      - file: html_css_dev/css_01_basics
+      - file: html_css_dev/css_02_properties
+      - file: html_css_dev/css_03_cascading
+      - file: html_css_dev/css_04_combining
       - file: html_css_dev/html_boilerplate
       - file: html_css_dev/filepaths_basics
 
