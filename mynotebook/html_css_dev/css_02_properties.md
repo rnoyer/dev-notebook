@@ -35,19 +35,19 @@ div{
 ## CSS positioning
 <img src="../images/css_positions.png" />
 
-### Static
+### position: static
 HTML default flow: elements are placed at the bottom of the previous element.
 
-### Relative
+### position: relative
 Position will be relative to the static (default) position.
 
-### Absolute
+### position: absolute
 Nearest positionned ancestor, or else top left corner of the webpage.
 
-### Fixed
+### position: fixed
 Position relative to the top left corner of the browser. It will follow when scrolling.
 
-### Z-index
+### position: z-index
 This value determines which element appear on top of other element (on z-axis).
 
 Value goes from -infinity to +100. The higher the number, the upper it is on the z-axis.
