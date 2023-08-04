@@ -1,0 +1,1467 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Setup instructions</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ubuntu_python_zsh_conf/lewagon_tuto';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">cheatsheets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cheatsheets/pyenv.html">pyenv cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cheatsheets/git.html">Git cheatsheet</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">HTML/CSS</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../html_css_dev/html_basics.html">HTML Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../html_css_dev/css_01_basics.html">CSS Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../html_css_dev/css_02_properties.html">CSS Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../html_css_dev/css_03_cascading.html">CSS Cascading</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../html_css_dev/css_04_combining.html">Combining CSS selectors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../html_css_dev/css_05_display_float_clear_props.html">Properties: Display, Float and Clear</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../html_css_dev/css_06_media_query.html">Media Queries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../html_css_dev/css_07_flexbox.html">Flexbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../html_css_dev/css_08_grid.html">Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../html_css_dev/html_boilerplate.html">HTML Boilerplate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../html_css_dev/filepaths_basics.html">Filepaths Basics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Javascript ES6</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../javascript/js_01_basics.html">Javascript basics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Android development</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../android_dev/kotlin.html">Kotlin language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../android_dev/flutter.html">Flutter</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">jupyterbook samples</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../sample_content/markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sample_content/notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sample_content/markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/rnoyer/dev-notes-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/rnoyer/dev-notes-book/issues/new?title=Issue%20on%20page%20%2Fubuntu_python_zsh_conf/lewagon_tuto.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/ubuntu_python_zsh_conf/lewagon_tuto.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Setup instructions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zoom">Zoom</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github-account">GitHub account</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-studio-code">Visual Studio Code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#launching-from-the-terminal">Launching from the terminal</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vs-code-extensions">VS Code Extensions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Installation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#live-share-configuration">Live Share configuration</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#command-line-tools">Command line tools</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zsh-git">Zsh &amp; Git</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#github-cli-installation">GitHub CLI installation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chrome-your-browser">Chrome - your browser</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oh-my-zsh">Oh-my-zsh</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#direnv">direnv</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github-cli">GitHub CLI</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#google-cloud-cli">Google Cloud CLI</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dotfiles">Dotfiles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#disable-ssh-passphrase-prompt">Disable SSH passphrase prompt</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-python-with-pyenv">Installing Python (with <code class="docutils literal notranslate"><span class="pre">pyenv</span></code>)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uninstall-conda">Uninstall <code class="docutils literal notranslate"><span class="pre">conda</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-pyenv">Install <code class="docutils literal notranslate"><span class="pre">pyenv</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-python">Install Python</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-virtual-environment">Python Virtual Environment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-packages">Python packages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-notebook-extensions"><code class="docutils literal notranslate"><span class="pre">jupyter</span></code> notebook extensions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#custom-css">Custom CSS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-check-up"><code class="docutils literal notranslate"><span class="pre">jupyter</span></code> check up</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nbextensions-check-up"><code class="docutils literal notranslate"><span class="pre">nbextensions</span></code> check up</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-setup-check-up">Python setup check up</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dbeaver">DBeaver</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#docker">Docker 🐋</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-docker">Install Docker</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#google-cloud-platform-setup">Google Cloud Platform setup</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#project-setup">Project setup</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#account-language">Account language</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#billing-account">Billing account</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#enabling-gcp-services">Enabling GCP services</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#configure-cloud-sdk">Configure Cloud sdk</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-service-account-key">Create a service account key 🔑</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kitt">Kitt</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slack">Slack</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Installation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#settings">Settings</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-kata">(Bonus) Kata</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="setup-instructions">
+<h1>Setup instructions<a class="headerlink" href="#setup-instructions" title="Permalink to this heading">#</a></h1>
+<p>You will find below the instructions to set up you computer for <a class="reference external" href="https://www.lewagon.com/data-science-course/full-time">Le Wagon Data Science course</a></p>
+<p>Please <strong>read them carefully and execute all commands in the following order</strong>. If you get stuck, don’t hesitate to ask a teacher for help :raising_hand:</p>
+<p>Let’s start :rocket:</p>
+<section id="zoom">
+<h2>Zoom<a class="headerlink" href="#zoom" title="Permalink to this heading">#</a></h2>
+<p>To be able to interact when we are not in the same physical room, we will be using <a class="reference external" href="https://zoom.us/">Zoom</a>, a video conferencing tool.</p>
+<p>:warning: If you already have Zoom installed, please make sure that the version is at least <strong>5.6</strong>.</p>
+<p>Go to <a class="reference external" href="https://zoom.us/download">zoom.us/download</a>.</p>
+<p>Under <strong>Zoom Client</strong> click the <strong>Download</strong> button.</p>
+<p>Open the file you have just downloaded to install the app.</p>
+<p>Open the Zoom app.</p>
+<p>If you already have a Zoom account, sign in using your credentials.</p>
+<p>If not, click on the <strong>Sign Up Free</strong> link:</p>
+<p><img alt="Sign Up Free to Zoom" src="https://github.com/lewagon/setup/blob/master/images/zoom_sign_up_free.png" /></p>
+<p>You will be redirected to Zoom’s website to complete a form.</p>
+<p>When it’s done, go back to the Zoom app and sign in using your credentials.</p>
+<p>You should then see a screen like this:</p>
+<p><img alt="Zoom Home Screen" src="https://github.com/lewagon/setup/blob/master/images/zoom_home_screen.png" /></p>
+<p>You can now close the Zoom app.</p>
+</section>
+<section id="github-account">
+<h2>GitHub account<a class="headerlink" href="#github-account" title="Permalink to this heading">#</a></h2>
+<p>Have you signed up to GitHub? If not, <a class="reference external" href="https://github.com/join">do it right away</a>.</p>
+<p>:point_right: <strong><a class="reference external" href="https://github.com/settings/profile">Upload a picture</a></strong> and put your name correctly on your GitHub account. This is important as we’ll use an internal dashboard with your avatar. Please do this <strong>now</strong>, before you continue with this guide.</p>
+<p><img alt="GitHub picture" src="https://github.com/lewagon/setup/blob/master/images/github_picture.png" /></p>
+</section>
+<section id="visual-studio-code">
+<h2>Visual Studio Code<a class="headerlink" href="#visual-studio-code" title="Permalink to this heading">#</a></h2>
+<section id="installation">
+<h3>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h3>
+<p>Let’s install <a class="reference external" href="https://code.visualstudio.com">Visual Studio Code</a> text editor.</p>
+<p>Copy (<code class="docutils literal notranslate"><span class="pre">Ctrl</span></code> + <code class="docutils literal notranslate"><span class="pre">C</span></code>) the commands below then paste them in your terminal (<code class="docutils literal notranslate"><span class="pre">Ctrl</span></code> + <code class="docutils literal notranslate"><span class="pre">Shift</span></code> + <code class="docutils literal notranslate"><span class="pre">v</span></code>):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget<span class="w"> </span>-qO-<span class="w"> </span>https://packages.microsoft.com/keys/microsoft.asc<span class="w"> </span><span class="p">|</span><span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span>&gt;<span class="w"> </span>packages.microsoft.gpg
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>install<span class="w"> </span>-o<span class="w"> </span>root<span class="w"> </span>-g<span class="w"> </span>root<span class="w"> </span>-m<span class="w"> </span><span class="m">644</span><span class="w"> </span>packages.microsoft.gpg<span class="w"> </span>/etc/apt/trusted.gpg.d/
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;echo &quot;deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main&quot; &gt; /etc/apt/sources.list.d/vscode.list&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm<span class="w"> </span>-f<span class="w"> </span>packages.microsoft.gpg
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>code
+</pre></div>
+</div>
+<p>These commands will ask for your password: type it in.</p>
+<p>:warning: When you type your password, nothing will show up on the screen, <strong>that’s normal</strong>. This is a security feature to mask not only your password as a whole but also its length. Just type in your password and when you’re done, press <code class="docutils literal notranslate"><span class="pre">Enter</span></code>.</p>
+</section>
+<section id="launching-from-the-terminal">
+<h3>Launching from the terminal<a class="headerlink" href="#launching-from-the-terminal" title="Permalink to this heading">#</a></h3>
+<p>Now let’s launch VS Code from <strong>the terminal</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>code
+</pre></div>
+</div>
+<p>:heavy_check_mark: If a VS Code window has just opened, you’re good to go :+1:</p>
+<p>:x: Otherwise, please <strong>contact a teacher</strong></p>
+</section>
+</section>
+<section id="vs-code-extensions">
+<h2>VS Code Extensions<a class="headerlink" href="#vs-code-extensions" title="Permalink to this heading">#</a></h2>
+<section id="id1">
+<h3>Installation<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<p>Let’s install some useful extensions to VS Code.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>code<span class="w"> </span>--install-extension<span class="w"> </span>ms-vscode.sublime-keybindings
+code<span class="w"> </span>--install-extension<span class="w"> </span>emmanuelbeziat.vscode-great-icons
+code<span class="w"> </span>--install-extension<span class="w"> </span>MS-vsliveshare.vsliveshare
+code<span class="w"> </span>--install-extension<span class="w"> </span>ms-python.python
+code<span class="w"> </span>--install-extension<span class="w"> </span>KevinRose.vsc-python-indent
+code<span class="w"> </span>--install-extension<span class="w"> </span>ms-python.vscode-pylance
+code<span class="w"> </span>--install-extension<span class="w"> </span>ms-toolsai.jupyter
+</pre></div>
+</div>
+<p>Here is a list of the extensions you are installing:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.sublime-keybindings">Sublime Text Keymap and Settings Importer</a></p></li>
+<li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=emmanuelbeziat.vscode-great-icons">VSCode Great Icons</a></p></li>
+<li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare">Live Share</a></p></li>
+<li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python</a></p></li>
+<li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=KevinRose.vsc-python-indent">Python Indent</a></p></li>
+<li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance">Pylance</a></p></li>
+<li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter">Jupyter</a></p></li>
+</ul>
+</section>
+<section id="live-share-configuration">
+<h3>Live Share configuration<a class="headerlink" href="#live-share-configuration" title="Permalink to this heading">#</a></h3>
+<p><a class="reference external" href="https://visualstudio.microsoft.com/services/live-share/">Visual Studio Live Share</a> is a VS Code extension which allows you to share the code in your text editor for debugging and pair-programming: let’s set it up!</p>
+<p>Launch VS Code from your terminal by typing <code class="docutils literal notranslate"><span class="pre">code</span></code> and pressing <code class="docutils literal notranslate"><span class="pre">Enter</span></code>.</p>
+<p>Click on the little arrow at the bottom of the left bar :point_down:</p>
+<p><img alt="VS Code Live Share" src="https://github.com/lewagon/setup/blob/master/images/vscode_live_share.png" /></p>
+<ul class="simple">
+<li><p>Click on the “Share” button, then on “GitHub (Sign in using GitHub account)”.</p></li>
+<li><p>A popup appears asking you to sign in with GitHub: click on “Allow”.</p></li>
+<li><p>You are redirected to a GitHub page in you browser asking you to authorize Visual Studio Code: click on “Continue” then “Authorize github”.</p></li>
+<li><p>VS Code may display additional pop-ups: close them by clicking “OK”.</p></li>
+</ul>
+<p>That’s it, you’re good to go!</p>
+</section>
+</section>
+<section id="command-line-tools">
+<h2>Command line tools<a class="headerlink" href="#command-line-tools" title="Permalink to this heading">#</a></h2>
+<section id="zsh-git">
+<h3>Zsh &amp; Git<a class="headerlink" href="#zsh-git" title="Permalink to this heading">#</a></h3>
+<p>Instead of using the default <code class="docutils literal notranslate"><span class="pre">bash</span></code> <a class="reference external" href="https://en.wikipedia.org/wiki/Shell_(computing)">shell</a>, we will use <code class="docutils literal notranslate"><span class="pre">zsh</span></code>.</p>
+<p>We will also use <a class="reference external" href="https://git-scm.com/"><code class="docutils literal notranslate"><span class="pre">git</span></code></a>, a command line software used for version control.</p>
+<p>Let’s install them, along with other useful tools:</p>
+<ul class="simple">
+<li><p>Open an <strong>Ubuntu terminal</strong></p></li>
+<li><p>Copy and paste the following commands:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>curl<span class="w"> </span>git<span class="w"> </span>imagemagick<span class="w"> </span>jq<span class="w"> </span>unzip<span class="w"> </span>vim<span class="w"> </span>zsh<span class="w"> </span>tree
+</pre></div>
+</div>
+<p>These commands will ask for your password: type it in.</p>
+<p>:warning: When you type your password, nothing will show up on the screen, <strong>that’s normal</strong>. This is a security feature to mask not only your password as a whole but also its length. Just type in your password and when you’re done, press <code class="docutils literal notranslate"><span class="pre">Enter</span></code>.</p>
+</section>
+<section id="github-cli-installation">
+<h3>GitHub CLI installation<a class="headerlink" href="#github-cli-installation" title="Permalink to this heading">#</a></h3>
+<p>Let’s now install <a class="reference external" href="https://cli.github.com">GitHub official CLI</a> (Command Line Interface). It’s a software used to interact with your GitHub account via the command line.</p>
+<p>In your terminal, copy-paste the following commands and type in your password if asked:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>remove<span class="w"> </span>-y<span class="w"> </span>gitsome<span class="w"> </span><span class="c1"># gh command can conflict with gitsome if already installed</span>
+curl<span class="w"> </span>-fsSL<span class="w"> </span>https://cli.github.com/packages/githubcli-archive-keyring.gpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>dd<span class="w"> </span><span class="nv">of</span><span class="o">=</span>/usr/share/keyrings/githubcli-archive-keyring.gpg
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb [arch=</span><span class="k">$(</span>dpkg<span class="w"> </span>--print-architecture<span class="k">)</span><span class="s2"> signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/github-cli.list<span class="w"> </span>&gt;<span class="w"> </span>/dev/null
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>gh
+</pre></div>
+</div>
+<p>To check that <code class="docutils literal notranslate"><span class="pre">gh</span></code> has been successfully installed on your machine, you can run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gh<span class="w"> </span>--version
+</pre></div>
+</div>
+<p>:heavy_check_mark: If you see <code class="docutils literal notranslate"><span class="pre">gh</span> <span class="pre">version</span> <span class="pre">X.Y.Z</span> <span class="pre">(YYYY-MM-DD)</span></code>, you’re good to go :+1:</p>
+<p>:x: Otherwise, please <strong>contact a teacher</strong></p>
+</section>
+</section>
+<section id="chrome-your-browser">
+<h2>Chrome - your browser<a class="headerlink" href="#chrome-your-browser" title="Permalink to this heading">#</a></h2>
+<p>Install the Google Chrome browser if you haven’t got it already and set it as a <strong>default browser</strong>.</p>
+<p>Follow the steps for your system from this link :point_right: <a class="reference external" href="https://support.google.com/chrome/answer/95346?co=GENIE.Platform%3DDesktop&amp;hl=en-GB">Install Google Chrome</a></p>
+<p><strong>Why Chrome?</strong></p>
+<p>We recommend to use it as your default browser as it’s most compatible with testing or running your code, as well as working with Google Cloud Platform. Another alternative is Firefox, however we don’t recommend using other tools like Opera, Internet Explorer or Safari.</p>
+</section>
+<section id="oh-my-zsh">
+<h2>Oh-my-zsh<a class="headerlink" href="#oh-my-zsh" title="Permalink to this heading">#</a></h2>
+<p>Let’s install the <code class="docutils literal notranslate"><span class="pre">zsh</span></code> plugin <a class="reference external" href="https://ohmyz.sh/">Oh My Zsh</a>.</p>
+<p>In a terminal execute the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh<span class="k">)</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p>If asked “Do you want to change your default shell to zsh?”, press <code class="docutils literal notranslate"><span class="pre">Y</span></code></p>
+<p>At the end your terminal should look like this:</p>
+<p><img alt="Ubuntu terminal with OhMyZsh" src="https://github.com/lewagon/setup/blob/master/images/oh_my_zsh.png" /></p>
+<p>:heavy_check_mark: If it does, you can continue :+1:</p>
+<p>:x: Otherwise, please <strong>ask for a teacher</strong></p>
+</section>
+<section id="direnv">
+<h2>direnv<a class="headerlink" href="#direnv" title="Permalink to this heading">#</a></h2>
+<p><a class="reference external" href="https://direnv.net/">direnv</a> is a shell extension. It makes it easy to deal with per project environment variables. This will be useful in order to customize the behavior of your code.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>update<span class="p">;</span><span class="w"> </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>direnv
+<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;eval &quot;$(direnv hook zsh)&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
+</pre></div>
+</div>
+</section>
+<section id="github-cli">
+<h2>GitHub CLI<a class="headerlink" href="#github-cli" title="Permalink to this heading">#</a></h2>
+<p>CLI is the acronym of <a class="reference external" href="https://en.wikipedia.org/wiki/Command-line_interface">Command-line Interface</a>.</p>
+<p>In this section, we will use <a class="reference external" href="https://cli.github.com/">GitHub CLI</a> to interact with GitHub directly from the terminal.</p>
+<p>It should already be installed on your computer from the previous commands.</p>
+<p>First in order to <strong>login</strong>, copy-paste the following command in your terminal:</p>
+<p>:warning: <strong>DO NOT edit the <code class="docutils literal notranslate"><span class="pre">email</span></code></strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gh<span class="w"> </span>auth<span class="w"> </span>login<span class="w"> </span>-s<span class="w"> </span><span class="s1">&#39;user:email&#39;</span><span class="w"> </span>-w
+</pre></div>
+</div>
+<p>gh will ask you few questions:</p>
+<p><code class="docutils literal notranslate"><span class="pre">What</span> <span class="pre">is</span> <span class="pre">your</span> <span class="pre">preferred</span> <span class="pre">protocol</span> <span class="pre">for</span> <span class="pre">Git</span> <span class="pre">operations?</span></code> With the arrows, choose <code class="docutils literal notranslate"><span class="pre">SSH</span></code> and press <code class="docutils literal notranslate"><span class="pre">Enter</span></code>. SSH is a protocol to log in using SSH keys instead of the well known username/password pair.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Generate</span> <span class="pre">a</span> <span class="pre">new</span> <span class="pre">SSH</span> <span class="pre">key</span> <span class="pre">to</span> <span class="pre">add</span> <span class="pre">to</span> <span class="pre">your</span> <span class="pre">GitHub</span> <span class="pre">account?</span></code> Press <code class="docutils literal notranslate"><span class="pre">Enter</span></code> to ask gh to generate the SSH keys for you.</p>
+<p>If you already have SSH keys, you will see instead <code class="docutils literal notranslate"><span class="pre">Upload</span> <span class="pre">your</span> <span class="pre">SSH</span> <span class="pre">public</span> <span class="pre">key</span> <span class="pre">to</span> <span class="pre">your</span> <span class="pre">GitHub</span> <span class="pre">account?</span></code> With the arrows, select your public key file path and press <code class="docutils literal notranslate"><span class="pre">Enter</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Enter</span> <span class="pre">a</span> <span class="pre">passphrase</span> <span class="pre">for</span> <span class="pre">your</span> <span class="pre">new</span> <span class="pre">SSH</span> <span class="pre">key</span> <span class="pre">(Optional)</span></code>. Type something you want and that you’ll remember. It’s a password to protect your private key stored on your hard drive. Then press <code class="docutils literal notranslate"><span class="pre">Enter</span></code>.</p>
+<p>:warning: When you type your passphrase, nothing will show up on the screen, <strong>that’s normal</strong>. This is a security feature to mask not only your passphrase as a whole but also its length. Just type your passphrase and when you’re done, press <code class="docutils literal notranslate"><span class="pre">Enter</span></code>.</p>
+<p>You will then get the following output:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>!<span class="w"> </span>First<span class="w"> </span>copy<span class="w"> </span>your<span class="w"> </span>one-time<span class="w"> </span>code:<span class="w"> </span>0EF9-D015
+-<span class="w"> </span>Press<span class="w"> </span>Enter<span class="w"> </span>to<span class="w"> </span>open<span class="w"> </span>github.com<span class="w"> </span><span class="k">in</span><span class="w"> </span>your<span class="w"> </span>browser...
+</pre></div>
+</div>
+<p>Select and copy the code (<code class="docutils literal notranslate"><span class="pre">0EF9-D015</span></code> in the example), then press <code class="docutils literal notranslate"><span class="pre">Enter</span></code>.</p>
+<p>Your browser will open and ask you to authorize GitHub CLI to use your GitHub account. Accept and wait a bit.</p>
+<p>Come back to the terminal, press <code class="docutils literal notranslate"><span class="pre">Enter</span></code> again, and that’s it.</p>
+<p>To check that you are properly connected, type:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gh<span class="w"> </span>auth<span class="w"> </span>status
+</pre></div>
+</div>
+<p>:heavy_check_mark: If you get <code class="docutils literal notranslate"><span class="pre">Logged</span> <span class="pre">in</span> <span class="pre">to</span> <span class="pre">github.com</span> <span class="pre">as</span> <span class="pre">&lt;YOUR</span> <span class="pre">USERNAME&gt;</span> </code>, then all good :+1:</p>
+<p>:x: If not, <strong>contact a teacher</strong>.</p>
+</section>
+<section id="google-cloud-cli">
+<h2>Google Cloud CLI<a class="headerlink" href="#google-cloud-cli" title="Permalink to this heading">#</a></h2>
+<p>Install the <code class="docutils literal notranslate"><span class="pre">gcloud</span></code> CLI to communicate with <a class="reference external" href="https://cloud.google.com/">Google Cloud Platform</a> through your terminal:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>-a<span class="w"> </span>/etc/apt/sources.list.d/google-cloud-sdk.list
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>apt-transport-https<span class="w"> </span>ca-certificates<span class="w"> </span>gnupg
+curl<span class="w"> </span>https://packages.cloud.google.com/apt/doc/apt-key.gpg<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>apt-key<span class="w"> </span>--keyring<span class="w"> </span>/usr/share/keyrings/cloud.google.gpg<span class="w"> </span>add<span class="w"> </span>-
+sudo<span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>google-cloud-sdk
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>google-cloud-sdk-app-engine-python
+</pre></div>
+</div>
+<p>👉 <a class="reference external" href="https://cloud.google.com/sdk/docs/install#deb">Install documentation</a></p>
+</section>
+<section id="dotfiles">
+<h2>Dotfiles<a class="headerlink" href="#dotfiles" title="Permalink to this heading">#</a></h2>
+<p>There are three options, choose <strong>one</strong>:</p>
+<details>
+    <summary>
+        <strong>I already attended Web Development (FullStack) bootcamp at Le Wagon <em>on the same laptop</em></strong>
+    </summary>
+<p>This means that you already forked the GitHub repo <code class="docutils literal notranslate"><span class="pre">lewagon/dotfiles</span></code>, but at that time the configuration was maybe not ready for the new Data Science bootcamp.</p>
+<p>Open your terminal and go to your <code class="docutils literal notranslate"><span class="pre">dotfiles</span></code> project:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/code/&lt;YOUR_GITHUB_NICKNAME&gt;/dotfiles
+code<span class="w"> </span>.<span class="w"> </span><span class="c1"># Open it in VS Code</span>
+</pre></div>
+</div>
+<p>In VS Code, open the <code class="docutils literal notranslate"><span class="pre">zshrc</span></code> file. Replace its content with the <a class="reference external" href="https://raw.githubusercontent.com/lewagon/dotfiles/master/zshrc">newest version</a> of that file that we provide. Save to disk.</p>
+<p>Back to the terminal, run a <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code> and ask a TA to come and check about this configuration change. You should see stuff about Python and <code class="docutils literal notranslate"><span class="pre">pyenv</span></code>.</p>
+<p>Once this is good, commit and push your changes:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>add<span class="w"> </span>zshrc
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Update zshrc for Data Science bootcamp&quot;</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>master
+</pre></div>
+</div>
+</details>
+<p>OR</p>
+<details>
+    <summary>
+        <strong>I did not attend the Web Dev bootcamp at Le Wagon</strong>
+    </summary>
+<p>Hackers love to refine and polish their shell and tools. We’ll start with a great default configuration provided by <a class="reference external" href="http://github.com/lewagon/dotfiles">Le Wagon</a>, stored on GitHub. As your configuration is personal, you need your own repository storing it, so you first need to fork it to your GitHub account.</p>
+<p>:arrow_right: <a class="reference external" href="https://github.com/lewagon/dotfiles/fork">Click here to <strong>fork</strong></a> the <code class="docutils literal notranslate"><span class="pre">lewagon/dotfiles</span></code> repository to your account (you’ll need to click again on your picture to confirm <em>where</em> you do the fork).</p>
+<p>Forking means that it will create a new repo in your GitHub account, identical to the original one. You’ll have a new repository on your GitHub account, <code class="docutils literal notranslate"><span class="pre">your_github_username/dotfiles</span></code>. We need to fork because each of you will need to put specific information (e.g. your name) in those
+files.</p>
+<p>Open your terminal and run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">GITHUB_USERNAME</span><span class="o">=</span><span class="sb">`</span>gh<span class="w"> </span>api<span class="w"> </span>user<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-r<span class="w"> </span><span class="s1">&#39;.login&#39;</span><span class="sb">`</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$GITHUB_USERNAME</span>
+</pre></div>
+</div>
+<p>You should see your GitHub username printed. If it’s not the case, <strong>stop here</strong> and ask for help.
+There seems to be a problem with the previous step (<code class="docutils literal notranslate"><span class="pre">gh</span> <span class="pre">auth</span></code>).</p>
+<p>Time to fork the repo and clone it on your laptop:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>-p<span class="w"> </span>~/code/<span class="nv">$GITHUB_USERNAME</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span><span class="nv">$_</span>
+gh<span class="w"> </span>repo<span class="w"> </span>fork<span class="w"> </span>lewagon/dotfiles<span class="w"> </span>--clone
+</pre></div>
+</div>
+<p>Run the <code class="docutils literal notranslate"><span class="pre">dotfiles</span></code> installer.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/code/<span class="nv">$GITHUB_USERNAME</span>/dotfiles<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>zsh<span class="w"> </span>install.sh
+</pre></div>
+</div>
+<p>Check the emails registered with your GitHub Account. You’ll need to pick one
+at the next step:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gh<span class="w"> </span>api<span class="w"> </span>user/emails<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-r<span class="w"> </span><span class="s1">&#39;.[].email&#39;</span>
+</pre></div>
+</div>
+<p>Run the git installer:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/code/<span class="nv">$GITHUB_USERNAME</span>/dotfiles<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>zsh<span class="w"> </span>git_setup.sh
+</pre></div>
+</div>
+<p>:point_up: This will <strong>prompt</strong> you for your name (<code class="docutils literal notranslate"><span class="pre">FirstName</span> <span class="pre">LastName</span></code>) and your email. Be careful
+you <strong>need</strong> to put one of the email listed above thanks to the previous <code class="docutils literal notranslate"><span class="pre">gh</span> <span class="pre">api</span> <span class="pre">...</span></code> command. If you
+don’t do that, Kitt won’t be able to track your progress.</p>
+<p>Please now <strong>quit</strong> all your opened terminal windows.</p>
+</details>
+<p>OR</p>
+<details>
+    <summary>
+        <strong>I already attended Web Development (FullStack) bootcamp at Le Wagon <em>but I have a new laptop</em></strong>
+    </summary>
+<p>Open your terminal and run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">GITHUB_USERNAME</span><span class="o">=</span><span class="sb">`</span>gh<span class="w"> </span>api<span class="w"> </span>user<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-r<span class="w"> </span><span class="s1">&#39;.login&#39;</span><span class="sb">`</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$GITHUB_USERNAME</span>
+</pre></div>
+</div>
+<p>You should see your GitHub username printed. If it’s not the case, <strong>stop here</strong> and ask for help.
+There seems to be a problem with the previous step (<code class="docutils literal notranslate"><span class="pre">gh</span> <span class="pre">auth</span></code>).</p>
+<p>Time to fork the repo and clone it on your laptop:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>-p<span class="w"> </span>~/code/<span class="nv">$GITHUB_USERNAME</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span><span class="nv">$_</span>
+gh<span class="w"> </span>repo<span class="w"> </span>fork<span class="w"> </span>lewagon/dotfiles<span class="w"> </span>--clone
+</pre></div>
+</div>
+<p>Run the <code class="docutils literal notranslate"><span class="pre">dotfiles</span></code> installer.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/code/<span class="nv">$GITHUB_USERNAME</span>/dotfiles<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>zsh<span class="w"> </span>install.sh
+</pre></div>
+</div>
+<p>Check the emails registered with your GitHub Account. You’ll need to pick one
+at the next step:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gh<span class="w"> </span>api<span class="w"> </span>user/emails<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-r<span class="w"> </span><span class="s1">&#39;.[].email&#39;</span>
+</pre></div>
+</div>
+<p>Run the git installer:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/code/<span class="nv">$GITHUB_USERNAME</span>/dotfiles<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>zsh<span class="w"> </span>git_setup.sh
+</pre></div>
+</div>
+<p>:point_up: This will <strong>prompt</strong> you for your name (<code class="docutils literal notranslate"><span class="pre">FirstName</span> <span class="pre">LastName</span></code>) and your email. Be careful
+you <strong>need</strong> to put one of the email listed above thanks to the previous <code class="docutils literal notranslate"><span class="pre">gh</span> <span class="pre">api</span> <span class="pre">...</span></code> command. If you
+don’t do that, Kitt won’t be able to track your progress.</p>
+<p>Please now <strong>quit</strong> all your opened terminal windows.</p>
+</details>
+</section>
+<section id="disable-ssh-passphrase-prompt">
+<h2>Disable SSH passphrase prompt<a class="headerlink" href="#disable-ssh-passphrase-prompt" title="Permalink to this heading">#</a></h2>
+<p>You don’t want to be asked for your passphrase every time you communicate with a distant repository. So, you need to add the plugin <code class="docutils literal notranslate"><span class="pre">ssh-agent</span></code> to <code class="docutils literal notranslate"><span class="pre">oh</span> <span class="pre">my</span> <span class="pre">zsh</span></code>:</p>
+<p>First, open the <code class="docutils literal notranslate"><span class="pre">.zshrc</span></code> file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>code<span class="w"> </span>~/.zshrc
+</pre></div>
+</div>
+<p>Then:</p>
+<ul class="simple">
+<li><p>Spot the line starting with <code class="docutils literal notranslate"><span class="pre">plugins=</span></code></p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">ssh-agent</span></code> at the end of the plugins list</p></li>
+</ul>
+<p>:heavy_check_mark: Save the <code class="docutils literal notranslate"><span class="pre">.zshrc</span></code> file with <code class="docutils literal notranslate"><span class="pre">Ctrl</span></code> + <code class="docutils literal notranslate"><span class="pre">S</span></code> and close your text editor.</p>
+</section>
+<section id="installing-python-with-pyenv">
+<h2>Installing Python (with <a class="reference external" href="https://github.com/pyenv/pyenv"><code class="docutils literal notranslate"><span class="pre">pyenv</span></code></a>)<a class="headerlink" href="#installing-python-with-pyenv" title="Permalink to this heading">#</a></h2>
+<section id="uninstall-conda">
+<h3>Uninstall <code class="docutils literal notranslate"><span class="pre">conda</span></code><a class="headerlink" href="#uninstall-conda" title="Permalink to this heading">#</a></h3>
+<p>As we are using <code class="docutils literal notranslate"><span class="pre">pyenv</span></code> to install and manage our Python version, we need to uninstall <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/"><code class="docutils literal notranslate"><span class="pre">conda</span></code></a>, another package manager you may have on your machine if you previously installed <a class="reference external" href="https://www.anaconda.com/">Anaconda</a>. Thus, we are preventing any possible Python version issue later.</p>
+<p>Check if you have <code class="docutils literal notranslate"><span class="pre">conda</span></code> installed on your machine:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>list
+</pre></div>
+</div>
+<p>If you have <code class="docutils literal notranslate"><span class="pre">zsh:</span> <span class="pre">command</span> <span class="pre">not</span> <span class="pre">found:</span> <span class="pre">conda</span></code>, you can <strong>skip</strong> the uninstall of <code class="docutils literal notranslate"><span class="pre">conda</span></code> and jump to the <strong>Install <code class="docutils literal notranslate"><span class="pre">pyenv</span></code></strong> section.</p>
+<details>
+    <summary markdown='span'><code>conda</code> uninstall instructions</summary>
+<ul class="simple">
+<li><p>Install the Anaconda-Clean package from your terminal and run the cleaning</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>install<span class="w"> </span>anaconda-clean
+anaconda-clean<span class="w"> </span>--yes
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Remove every Anaconda directories</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm<span class="w"> </span>-rf<span class="w"> </span>~/anaconda2
+rm<span class="w"> </span>-rf<span class="w"> </span>~/anaconda3
+rm<span class="w"> </span>-rf<span class="w"> </span>~/.anaconda_backup
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Remove Anaconda path from your <code class="docutils literal notranslate"><span class="pre">.bash_profile</span></code></p>
+<ul>
+<li><p>Open the file with <code class="docutils literal notranslate"><span class="pre">code</span> <span class="pre">~/.bash_profile</span></code></p></li>
+<li><p>If the file opens find the line matching the following pattern <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">PATH=&quot;/path/to/anaconda3/bin:$PATH&quot;</span></code> and delete the line</p></li>
+<li><p>Save the file with <code class="docutils literal notranslate"><span class="pre">CTRL</span></code> + <code class="docutils literal notranslate"><span class="pre">s</span></code></p></li>
+</ul>
+</li>
+<li><p>Restart your terminal with <code class="docutils literal notranslate"><span class="pre">exec</span> <span class="pre">zsh</span></code></p></li>
+<li><p>Remove Anaconda initialization from your <code class="docutils literal notranslate"><span class="pre">.zshrc</span></code>:</p>
+<ul>
+<li><p>Open the file with <code class="docutils literal notranslate"><span class="pre">code</span> <span class="pre">~/.zshrc</span></code></p></li>
+<li><p>Remove the code lines starting from <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span> <span class="pre">conda</span> <span class="pre">initialize</span> <span class="pre">&gt;&gt;&gt;</span></code> to <code class="docutils literal notranslate"><span class="pre">&lt;&lt;&lt;</span> <span class="pre">conda</span> <span class="pre">initialize</span> <span class="pre">&lt;&lt;&lt;</span></code></p></li>
+</ul>
+</li>
+</ul>
+</details>
+</section>
+<section id="install-pyenv">
+<h3>Install <code class="docutils literal notranslate"><span class="pre">pyenv</span></code><a class="headerlink" href="#install-pyenv" title="Permalink to this heading">#</a></h3>
+<p>Ubuntu comes with an outdated version of Python that we don’t want to use. You might already have installed Anaconda or something else to tinker with Python and Data Science packages. All of this does not really matter as we are going to do a professional setup of Python where you’ll be able to switch which version you want to use whenever you type <code class="docutils literal notranslate"><span class="pre">python</span></code> in the terminal.</p>
+<p>First let’s install <code class="docutils literal notranslate"><span class="pre">pyenv</span></code> with the following Terminal command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/pyenv/pyenv.git<span class="w"> </span>~/.pyenv
+<span class="nb">exec</span><span class="w"> </span>zsh
+</pre></div>
+</div>
+<p>Let’s install some <a class="reference external" href="https://github.com/pyenv/pyenv/wiki/common-build-problems#prerequisites">dependencies</a> needed to build Python from <code class="docutils literal notranslate"><span class="pre">pyenv</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>update<span class="p">;</span><span class="w"> </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>make<span class="w"> </span>build-essential<span class="w"> </span>libssl-dev<span class="w"> </span>zlib1g-dev<span class="w"> </span><span class="se">\</span>
+libbz2-dev<span class="w"> </span>libreadline-dev<span class="w"> </span>libsqlite3-dev<span class="w"> </span>wget<span class="w"> </span>curl<span class="w"> </span>llvm<span class="w"> </span><span class="se">\</span>
+libncursesw5-dev<span class="w"> </span>xz-utils<span class="w"> </span>tk-dev<span class="w"> </span>libxml2-dev<span class="w"> </span>libxmlsec1-dev<span class="w"> </span>libffi-dev<span class="w"> </span>liblzma-dev<span class="w"> </span><span class="se">\</span>
+python3-dev
+</pre></div>
+</div>
+</section>
+<section id="install-python">
+<h3>Install Python<a class="headerlink" href="#install-python" title="Permalink to this heading">#</a></h3>
+<p>Let’s install the <a class="reference external" href="https://www.python.org/doc/versions/">latest stable version of Python</a> supported by Le Wagon’s curriculum:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pyenv<span class="w"> </span>install<span class="w"> </span><span class="m">3</span>.10.6
+</pre></div>
+</div>
+<p>This command might take a while, this is perfectly normal. Don’t hesitate to help other students seated next to you!</p>
+<p>OK once this command is complete, we are going to tell the system to use this version of Python <strong>by default</strong>. This is done with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pyenv<span class="w"> </span>global<span class="w"> </span><span class="m">3</span>.10.6
+<span class="nb">exec</span><span class="w"> </span>zsh
+</pre></div>
+</div>
+<p>To check if this worked, run <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">--version</span></code>. If you see <code class="docutils literal notranslate"><span class="pre">3.10.6</span></code>, perfect! If not, ask a TA that will help you debug the problem thanks to <code class="docutils literal notranslate"><span class="pre">pyenv</span> <span class="pre">versions</span></code> and <code class="docutils literal notranslate"><span class="pre">type</span> <span class="pre">-a</span> <span class="pre">python</span></code> (<code class="docutils literal notranslate"><span class="pre">python</span></code> should be using the <code class="docutils literal notranslate"><span class="pre">.pyenv/shims</span></code> version first).</p>
+</section>
+</section>
+<section id="python-virtual-environment">
+<h2>Python Virtual Environment<a class="headerlink" href="#python-virtual-environment" title="Permalink to this heading">#</a></h2>
+<p>Before we start installing relevant Python packages, we will isolate the setup for the Bootcamp into a <strong>dedicated</strong> virtual environment. We will use a <code class="docutils literal notranslate"><span class="pre">pyenv</span></code> plugin called <a class="reference external" href="https://github.com/pyenv/pyenv-virtualenv"><code class="docutils literal notranslate"><span class="pre">pyenv-virtualenv</span></code></a>.</p>
+<p>First let’s install this plugin:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/pyenv/pyenv-virtualenv.git<span class="w"> </span><span class="k">$(</span>pyenv<span class="w"> </span>root<span class="k">)</span>/plugins/pyenv-virtualenv
+<span class="nb">exec</span><span class="w"> </span>zsh
+</pre></div>
+</div>
+<p>Let’s create the virtual environment we are going to use during the whole bootcamp:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pyenv<span class="w"> </span>virtualenv<span class="w"> </span><span class="m">3</span>.10.6<span class="w"> </span>lewagon
+</pre></div>
+</div>
+<p>Let’s now set the virtual environment with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pyenv<span class="w"> </span>global<span class="w"> </span>lewagon
+</pre></div>
+</div>
+<p>Great! Anytime we’ll install Python package, we’ll do it in that environment.</p>
+</section>
+<section id="python-packages">
+<h2>Python packages<a class="headerlink" href="#python-packages" title="Permalink to this heading">#</a></h2>
+<p>Now that we have a pristine <code class="docutils literal notranslate"><span class="pre">lewagon</span></code> virtual environment, it’s time to install some packages in it.</p>
+<p>First, let’s upgrade <code class="docutils literal notranslate"><span class="pre">pip</span></code>, the tool to install Python Packages from <a class="reference external" href="https://pypi.org">pypi.org</a>. In the latest terminal where the virtualenv <code class="docutils literal notranslate"><span class="pre">lewagon</span></code> is activated, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
+</pre></div>
+</div>
+<p>Then let’s install some packages for the first weeks of the program:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>https://raw.githubusercontent.com/lewagon/data-setup/master/specs/releases/linux.txt
+</pre></div>
+</div>
+</section>
+<section id="jupyter-notebook-extensions">
+<h2><code class="docutils literal notranslate"><span class="pre">jupyter</span></code> notebook extensions<a class="headerlink" href="#jupyter-notebook-extensions" title="Permalink to this heading">#</a></h2>
+<p>Pimp your <code class="docutils literal notranslate"><span class="pre">jupyter</span></code> notebooks with awesome extensions:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># install nbextensions</span>
+jupyter<span class="w"> </span>contrib<span class="w"> </span>nbextension<span class="w"> </span>install<span class="w"> </span>--user
+jupyter<span class="w"> </span>nbextension<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>toc2/main
+jupyter<span class="w"> </span>nbextension<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>collapsible_headings/main
+jupyter<span class="w"> </span>nbextension<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>spellchecker/main
+jupyter<span class="w"> </span>nbextension<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>code_prettify/code_prettify
+</pre></div>
+</div>
+<section id="custom-css">
+<h3>Custom CSS<a class="headerlink" href="#custom-css" title="Permalink to this heading">#</a></h3>
+<p>Improve the display of the <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details"><code class="docutils literal notranslate"><span class="pre">details</span></code> disclosure elements</a> in your notebooks.</p>
+<p>Open <code class="docutils literal notranslate"><span class="pre">custom/custom.css</span></code> in the config directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span><span class="k">$(</span>jupyter<span class="w"> </span>--config-dir<span class="k">)</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>custom
+touch<span class="w"> </span>custom/custom.css
+code<span class="w"> </span>custom/custom.css
+</pre></div>
+</div>
+<p>Edit <code class="docutils literal notranslate"><span class="pre">custom.css</span></code> with:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">summary</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">cursor</span><span class="p">:</span><span class="w"> </span><span class="kc">pointer</span><span class="p">;</span>
+<span class="w">    </span><span class="k">display</span><span class="p">:</span><span class="kc">list-item</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">summary</span><span class="p">::</span><span class="nd">marker</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>You can close VS Code.</p>
+</section>
+<section id="jupyter-check-up">
+<h3><code class="docutils literal notranslate"><span class="pre">jupyter</span></code> check up<a class="headerlink" href="#jupyter-check-up" title="Permalink to this heading">#</a></h3>
+<p>Let’s reset your terminal:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">exec</span><span class="w"> </span>zsh
+</pre></div>
+</div>
+<p>Now, check you can launch a notebook server on your machine:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>notebook
+</pre></div>
+</div>
+<p>Your web browser should open on a <code class="docutils literal notranslate"><span class="pre">jupyter</span></code> window:</p>
+<p><img alt="jupyter.png" src="ubuntu_python_zsh_conf/images/jupyter.png" /></p>
+<p>Click on <code class="docutils literal notranslate"><span class="pre">New</span></code>:</p>
+<p><img alt="jupyter_new.png" src="ubuntu_python_zsh_conf/images/jupyter_new.png" /></p>
+<p>A tab should open on a new notebook:</p>
+<p><img alt="jupyter_notebook.png" src="ubuntu_python_zsh_conf/images/jupyter_notebook.png" /></p>
+</section>
+<section id="nbextensions-check-up">
+<h3><code class="docutils literal notranslate"><span class="pre">nbextensions</span></code> check up<a class="headerlink" href="#nbextensions-check-up" title="Permalink to this heading">#</a></h3>
+<p>Perform a sanity check for <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebooks</span> <span class="pre">nbextensions</span></code>. Click on <code class="docutils literal notranslate"><span class="pre">Nbextensions</span></code>:</p>
+<p><img alt="jupyter_nbextensions.png" src="ubuntu_python_zsh_conf/images/jupyter_nbextensions.png" /></p>
+<p>Untick <em>“disable configuration for nbextensions without explicit compatibility”</em> then check that <em>at least</em> all <code class="docutils literal notranslate"><span class="pre">nbextensions</span></code> circled in red are enabled:</p>
+<p><img alt="nbextensions.png" src="ubuntu_python_zsh_conf/images/nbextensions.png" /></p>
+<p>You can close your web browser then terminate the jupyter server with <code class="docutils literal notranslate"><span class="pre">CTRL</span></code> + <code class="docutils literal notranslate"><span class="pre">C</span></code>.</p>
+</section>
+<section id="python-setup-check-up">
+<h3>Python setup check up<a class="headerlink" href="#python-setup-check-up" title="Permalink to this heading">#</a></h3>
+<p>Check your Python version with the following commands:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>zsh<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://raw.githubusercontent.com/lewagon/data-setup/master/checks/python_checker.sh<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span><span class="m">3</span>.10.6
+</pre></div>
+</div>
+<p>Run the following command to check if you successfully installed the required packages:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>zsh<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://raw.githubusercontent.com/lewagon/data-setup/master/checks/pip_check.sh<span class="k">)</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p>Now run the following command to check if you can load these packages:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://raw.githubusercontent.com/lewagon/data-setup/master/checks/pip_check.py<span class="k">)</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p>Make sure you can run Jupyter:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>notebook
+</pre></div>
+</div>
+<p>And open a <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">3</span></code> notebook.</p>
+<p>Make sure that you are running the correct python version in the notebook. Open a cell and run :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span><span class="p">;</span> <span class="n">sys</span><span class="o">.</span><span class="n">version</span>
+</pre></div>
+</div>
+<p>Here you have it! A complete python virtual env with all the third-party packages you’ll need for the whole bootcamp.</p>
+</section>
+</section>
+<section id="dbeaver">
+<h2>DBeaver<a class="headerlink" href="#dbeaver" title="Permalink to this heading">#</a></h2>
+<p>Download and install <a class="reference external" href="https://dbeaver.io/">DBeaver</a>, a free and open source powerful tool to connect to any database, explore the schema and even <strong>run SQL queries</strong>.</p>
+</section>
+<section id="docker">
+<h2>Docker 🐋<a class="headerlink" href="#docker" title="Permalink to this heading">#</a></h2>
+<p>Docker is an open platform for developing, shipping, and running applications.</p>
+<p><em>if you already have Docker installed on your machine please update with the latest version</em></p>
+<section id="install-docker">
+<h3>Install Docker<a class="headerlink" href="#install-docker" title="Permalink to this heading">#</a></h3>
+<p>Go to <a class="reference external" href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository">Docker install documentation</a>.</p>
+<p>Then follow the tutorial instructions to install Docker <strong>using the repository</strong>. There are 2 steps:</p>
+<ul class="simple">
+<li><p>SET UP THE REPOSITORY</p></li>
+<li><p>INSTALL DOCKER ENGINE</p></li>
+</ul>
+<p>Once done, you should be able to run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>service<span class="w"> </span>docker<span class="w"> </span>start
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>hello-world
+</pre></div>
+</div>
+<p>The following message should print:</p>
+<p><img alt="" src="ubuntu_python_zsh_conf/images/docker_hello.png" /></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>service<span class="w"> </span>docker<span class="w"> </span>stop
+</pre></div>
+</div>
+</section>
+</section>
+<section id="google-cloud-platform-setup">
+<h2>Google Cloud Platform setup<a class="headerlink" href="#google-cloud-platform-setup" title="Permalink to this heading">#</a></h2>
+<p><a class="reference external" href="https://cloud.google.com/">GCP</a> is a cloud solution that you are going to use in order to deploy your Machine Learning-based products to production.</p>
+<p>🚨 If you are a student of the <strong>Part-Time Bootcamp</strong>, SKIP THIS SECTION FOR NOW! <strong>GCP</strong> offers $300 worth of free credits for a duration of 3 months. You do not want to activate your GCP account too soon 🙅‍♂️</p>
+<section id="project-setup">
+<h3>Project setup<a class="headerlink" href="#project-setup" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Go to <a class="reference external" href="https://console.cloud.google.com/">Google Cloud</a> and create an account if you do not already have one</p></li>
+<li><p>In the Cloud Console, on the project list, select or create a Cloud project</p></li>
+</ul>
+<p><img alt="" src="ubuntu_python_zsh_conf/images/gcp-create-project.png" /></p>
+<ul class="simple">
+<li><p>Give it a name such as <code class="docutils literal notranslate"><span class="pre">Wagon</span> <span class="pre">Bootcamp</span></code> for example</p></li>
+<li><p>Notice the <code class="docutils literal notranslate"><span class="pre">ID</span></code> automatically created for the project, e.g. <code class="docutils literal notranslate"><span class="pre">wagon-bootcamp-123456</span></code></p></li>
+</ul>
+<p><img alt="" src="ubuntu_python_zsh_conf/images/gcp_project.png" /></p>
+</section>
+<section id="account-language">
+<h3>Account language<a class="headerlink" href="#account-language" title="Permalink to this heading">#</a></h3>
+<p>In order to facilitate the following of the instructions during the bootcamp, open your GCP account preferences:</p>
+<p><a class="reference external" href="https://myaccount.google.com/language">https://myaccount.google.com/language</a></p>
+<p>If the <em>preferred language</em> is not:</p>
+<ul class="simple">
+<li><p><strong>English</strong></p></li>
+<li><p><strong>United States</strong></p></li>
+</ul>
+<p>Then switch the language to english:</p>
+<ul class="simple">
+<li><p>Click on the edit pen logo</p></li>
+<li><p>Select <strong>English</strong></p></li>
+<li><p>Select <strong>United States</strong></p></li>
+<li><p>Click on <strong>Select</strong></p></li>
+</ul>
+</section>
+<section id="billing-account">
+<h3>Billing account<a class="headerlink" href="#billing-account" title="Permalink to this heading">#</a></h3>
+<p>You will now link your account to your credit card. This step is required or you will not be able to use the services provided by GCP. Do not worry, you will be able to consume most GCP services through free credits throughout the bootcamp.</p>
+<p><img alt="" src="ubuntu_python_zsh_conf/images/gcp-billing.png" /></p>
+<ul class="simple">
+<li><p>Click on <strong>Billing</strong></p></li>
+<li><p>Click on <strong>MANAGE BILLING ACCOUNTS</strong></p></li>
+<li><p>Click on <strong>ADD BILLING ACCOUNT</strong></p></li>
+<li><p>Give a name to your billing account, e.g. <code class="docutils literal notranslate"><span class="pre">My</span> <span class="pre">Billing</span> <span class="pre">Account</span></code></p></li>
+<li><p>Click on “I have read…” and agree the to the terms of service</p></li>
+<li><p>Click on <strong>CONTINUE</strong></p></li>
+<li><p>Select your account type: <code class="docutils literal notranslate"><span class="pre">Individual</span></code></p></li>
+<li><p>Fill your name and address</p></li>
+</ul>
+<p>You should see that you have a free credit of “$300 credits over the next 90days”.</p>
+<ul class="simple">
+<li><p>Click on card details</p></li>
+<li><p>Enter your credit card info</p></li>
+<li><p>Click on <strong>START MY FREE TRIAL</strong></p></li>
+</ul>
+<p>Once this is done, verify that your billing account is linked to your GCP project.</p>
+<ul class="simple">
+<li><p>Select your project</p></li>
+<li><p>Go to <strong>Billing</strong></p></li>
+<li><p>Select <strong>LINK A BILLING ACCOUNT</strong></p></li>
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">My</span> <span class="pre">Billing</span> <span class="pre">Account</span></code></p></li>
+<li><p>Click on <strong>SET ACCOUNT</strong></p></li>
+</ul>
+<p>You should now see:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Free trial status: $300 credit and 91 days remaining - with a full account, you&#39;ll get unlimited access to all of Google Cloud Platform.
+</pre></div>
+</div>
+<details>
+  <summary>👉 If you do not own a credit card 👈</summary>
+<p>If you do not own a credit card, an alternative is to setup a <strong>Revolut</strong> account.
+Revolut is a financial app that will allow you to create a virtual credit card linked to your mobile phone billing account.</p>
+<p>Skip this step if you own a credit card and use your credit card for the setup.</p>
+<p>Download the Revolut app, or go to <a class="reference external" href="https://www.revolut.com/a-radically-better-account">revolut</a> and follow the steps to download the app (enter your mobile phone number and click on Get Started).</p>
+<ul class="simple">
+<li><p>Open the Revolut app</p></li>
+<li><p>Enter your mobile phone number</p></li>
+<li><p>Enter the verification code received by SMS</p></li>
+<li><p>The app will ask for your country, address, first and last name, date of birth, email address</p></li>
+<li><p>The app will also ask for a selfie and request your profession</p></li>
+<li><p>The app will require a photo of your identification card or passport</p></li>
+</ul>
+<p>Once this is done, select the standard (free) plan. No need to add the card to Apple pay, or ask for a the delivery of a physical card, or add money securely.</p>
+<p>You now have a virtual card which we will use for the GCP setup.</p>
+<p>In the main view of the Revolut the app</p>
+<ul class="simple">
+<li><p>Click on Ready to use</p></li>
+<li><p>Click on the card</p></li>
+<li><p>Click on Show card details</p></li>
+<li><p>Note down the references of the virtual credit card and use them in order to proceed with the GCP setup</p></li>
+</ul>
+</details>
+<details>
+  <summary>👉 If you receive an email from Google saying "Urgent: your billing account XXXXXX-XXXXXX-XXXXXX has been suspended" 👈</summary>
+<p>This may happen especially in case you just setup a Revolut account.</p>
+<ul class="simple">
+<li><p>Click on PROCEED TO VERIFICATION</p></li>
+<li><p>You will be asked to send a picture of your credit card (only the last 4 digits, no other info)</p></li>
+<li><p>In case you used <strong>Revolut</strong>, you can send a screenshot of your virtual credit card (do not forget to remove the validity date from the screenshot)</p></li>
+<li><p>Explain that you are attending the Le Wagon bootcamp, do not own a credit card, and have just created a Revolut account in order to setup GCP for the bootcamp using a virtual credit card</p></li>
+</ul>
+<p>You may receive a validation or requests for more information within 30 minutes.</p>
+<p>Once the verification goes through, you should receive an email stating that “Your Google Cloud Platform billing account XXXXXX-XXXXXX-XXXXXX has been fully reinstated and is ready to use.”.</p>
+</details>
+</section>
+<section id="enabling-gcp-services">
+<h3>Enabling GCP services<a class="headerlink" href="#enabling-gcp-services" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Make sure that billing is enabled for your Google Cloud project</p></li>
+</ul>
+<p>ℹ️ You have a <strong>$300 credit</strong> to use for Google Cloud resources, which will be more than enough for the bootcamp.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://console.cloud.google.com/flows/enableapi?apiid=ml.googleapis.com,compute_component&amp;_ga=2.269215094.662509797.1580849510-2071889129.1567861089&amp;_gac=1.154971594.1580849512.CjwKCAiAyeTxBRBvEiwAuM8dnbZ6uMwizbZW44J2mBCX6ncEjwjwpgF8S8QsvhYAXLkJ8awDnIRTNRoCJ_0QAvD_BwE">Enable the AI Platform Training &amp; Prediction and Compute Engine APIs</a> (This step may take a few minutes)</p></li>
+</ul>
+</section>
+<section id="configure-cloud-sdk">
+<h3>Configure Cloud sdk<a class="headerlink" href="#configure-cloud-sdk" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Authenticate the <code class="docutils literal notranslate"><span class="pre">gcloud</span></code> CLI with the google account you used for GCP</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gcloud<span class="w"> </span>auth<span class="w"> </span>login
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Login to your Google account on the new tab opened in your web browser</p></li>
+<li><p>List your active account and check your email address you used for GCP is present</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gcloud<span class="w"> </span>auth<span class="w"> </span>list
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Set your current project (replace <code class="docutils literal notranslate"><span class="pre">PROJECT_ID</span></code> with the <code class="docutils literal notranslate"><span class="pre">ID</span></code> of your project, e.g. <code class="docutils literal notranslate"><span class="pre">wagon-bootcamp-123456</span></code>)</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gcloud<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>project<span class="w"> </span>PROJECT_ID
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>List your active account and current project and check your project is present</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gcloud<span class="w"> </span>config<span class="w"> </span>list
+</pre></div>
+</div>
+</section>
+<section id="create-a-service-account-key">
+<h3>Create a service account key 🔑<a class="headerlink" href="#create-a-service-account-key" title="Permalink to this heading">#</a></h3>
+<p>Now that you have created a <code class="docutils literal notranslate"><span class="pre">GCP</span> <span class="pre">account</span></code> and a <code class="docutils literal notranslate"><span class="pre">project</span></code> (identified by its <code class="docutils literal notranslate"><span class="pre">PROJECT_ID</span></code>), we are going to configure the actions (API calls) that you want to allow your code to perform.</p>
+<details>
+  <summary>🤔 Why do we need a service account key ?</summary>
+<p>You have created a <code class="docutils literal notranslate"><span class="pre">GCP</span> <span class="pre">account</span></code> linked to your credit card. Your account will be billed according to your usage of the ressources of the <strong>Google Cloud Platform</strong>. The billing will occur if you consume anything once the free trial is over, or if you exceed the amount of spending allowed during the free trial.</p>
+<p>In your <code class="docutils literal notranslate"><span class="pre">GCP</span> <span class="pre">account</span></code>, you have created a single <code class="docutils literal notranslate"><span class="pre">GCP</span> <span class="pre">project</span></code>, identified by its <code class="docutils literal notranslate"><span class="pre">PROJECT_ID</span></code>. The <code class="docutils literal notranslate"><span class="pre">GCP</span> <span class="pre">projects</span></code> allow you to organize and monitor more precisely how you consume the <strong>GCP</strong> ressources. For the purpose of the bootcamp, we are only going to create a single project.</p>
+<p>Now, we need a way to tell which ressources within a <code class="docutils literal notranslate"><span class="pre">GCP</span> <span class="pre">project</span></code> our code will be allowed to consume. Our code consumes GCP ressources through API calls.</p>
+<p>Since API calls are not free, it is important to define with caution how our code will be allowed to use them. During the bootcamp this will not be an issue and we are going to allow our code to use all the API of <strong>GCP</strong> without any restrictions.</p>
+<p>In the same way that there may be several projects associated with a GCP account, a project may be composed of several services (any bundle of code, whatever its form factor, that requires the usage of GCP API calls in order to fulfill its purpose).</p>
+<p>GCP requires that the services of the projects using API calls are registered on the platform and their credentials configured through the access granted to a <code class="docutils literal notranslate"><span class="pre">service</span> <span class="pre">account</span></code>.</p>
+<p>For the moment we will only need to use a single service and will create the corresponding <code class="docutils literal notranslate"><span class="pre">service</span> <span class="pre">account</span></code>.</p>
+</details>
+<p>Since the <a class="reference external" href="https://cloud.google.com/iam/docs/service-accounts">service account</a> is what identifies your application (and therefore your GCP billing account and ultimately your credit card), you are going to want to be cautious with the next steps.</p>
+<p>⚠️ <strong>Do not share you service account json file 🔑</strong> ⚠️ Do not store it on your desktop, do not store it in your git codebase (even if your git repository is private), do not let it by the coffee machine, do not send it as a tweet.</p>
+<ul class="simple">
+<li><p>Go to the <a class="reference external" href="https://console.cloud.google.com/apis/credentials/serviceaccountkey">service accounts page</a></p></li>
+<li><p>Select your project in the list of recent projects if asked to</p></li>
+<li><p>Create a service account:</p>
+<ul>
+<li><p>Click on <strong>CREATE SERVICE ACCOUNT</strong>:</p></li>
+<li><p>Give a <code class="docutils literal notranslate"><span class="pre">Service</span> <span class="pre">account</span> <span class="pre">name</span></code> to that account</p></li>
+<li><p>Click on <strong>CREATE AND CONTINUE</strong></p></li>
+<li><p>Click on <strong>Select a role</strong> and choose <code class="docutils literal notranslate"><span class="pre">Quick</span> <span class="pre">access/Basic</span></code> then <strong>Owner</strong>, which gives full access to all ressources</p></li>
+<li><p>Click on <strong>CONTINUE</strong></p></li>
+<li><p>Click on <strong>DONE</strong></p></li>
+</ul>
+</li>
+<li><p>Download the service account json file 🔑:</p>
+<ul>
+<li><p>Click on the newly created service account</p></li>
+<li><p>Click on <strong>KEYS</strong></p></li>
+<li><p>Click on <strong>ADD KEY</strong> then <strong>Create new key</strong></p></li>
+<li><p>Select <strong>JSON</strong> and click on <strong>CREATE</strong></p></li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="ubuntu_python_zsh_conf/images/gcp_create_key.png" /></p>
+<p>The browser has now saved the service account json file 🔑 in your downloads directory (it is named according to your service account name, something like <code class="docutils literal notranslate"><span class="pre">le-wagon-data-123456789abc.json</span></code>)</p>
+<ul class="simple">
+<li><p>Store the service account json file somewhere you’ll remember, for example:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/home/LINUX_USERNAME/code/GITHUB_NICKNAME/gcp/SERVICE_ACCOUNT_JSON_FILE_CONTAINING_YOUR_SECRET_KEY.json
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Store the <strong>absolute path</strong> to the <code class="docutils literal notranslate"><span class="pre">JSON</span></code> file as an environment variable:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;export GOOGLE_APPLICATION_CREDENTIALS=/path/to/the/SERVICE_ACCOUNT_JSON_FILE_CONTAINING_YOUR_SECRET_KEY.json&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zshrc
+</pre></div>
+</div>
+<p><strong>Note:</strong> every time you run this command, it will add this line to your zshrc file regardless of whether you already have it. If you made a mistake and need to fix it, preferably open the file and edit the line!</p>
+<p>You can do so by running</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>code<span class="w"> </span>~/.zshrc
+</pre></div>
+</div>
+<p>in the Terminal! 😄</p>
+<details>
+  <summary>ℹ️ How to find the absolute path of a file?</summary>
+  You can drag and drop the file in your terminal.
+</details>
+<p><strong>Restart</strong> your terminal and run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="nv">$GOOGLE_APPLICATION_CREDENTIALS</span>
+</pre></div>
+</div>
+<p>The ouptut should be the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/some/absolute/path/to/your/gcp/SERVICE_ACCOUNT_JSON_FILE_CONTAINING_YOUR_SECRET_KEY.json
+</pre></div>
+</div>
+<p>Now let’s verify that the path to your service account json file is correct:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="nv">$GOOGLE_APPLICATION_CREDENTIALS</span><span class="k">)</span>
+</pre></div>
+</div>
+<p>👉 This command should display the content of your service account json file. If it does not, ask for a TA 🙏</p>
+<p>Your code and utilities are now able to access the resources of your GCP account.</p>
+<p>Let’s proceed with the final steps of configuration…</p>
+<ul class="simple">
+<li><p>List the service accounts associated to your active account and current project</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gcloud<span class="w"> </span>iam<span class="w"> </span>service-accounts<span class="w"> </span>list
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Retrieve the service account email address, e.g. <code class="docutils literal notranslate"><span class="pre">SERVICE_ACCOUNT_NAME&#64;PROJECT_ID.iam.gserviceaccount.com</span></code></p></li>
+<li><p>List the roles of the service account from the cli (replace PROJECT_ID and SERVICE_ACCOUNT_EMAIL)</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gcloud<span class="w"> </span>projects<span class="w"> </span>get-iam-policy<span class="w"> </span>PROJECT_ID<span class="w"> </span><span class="se">\</span>
+--flatten<span class="o">=</span><span class="s2">&quot;bindings[].members&quot;</span><span class="w"> </span><span class="se">\</span>
+--format<span class="o">=</span><span class="s1">&#39;table(bindings.role)&#39;</span><span class="w"> </span><span class="se">\</span>
+--filter<span class="o">=</span><span class="s2">&quot;bindings.members:SERVICE_ACCOUNT_EMAIL&quot;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>You should see that your service account has a role of <code class="docutils literal notranslate"><span class="pre">roles/owner</span></code></p></li>
+</ul>
+<details>
+  <summary>Troubleshooting</summary>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">AccessDeniedException:</span> <span class="pre">403</span> <span class="pre">The</span> <span class="pre">project</span> <span class="pre">to</span> <span class="pre">be</span> <span class="pre">billed</span> <span class="pre">is</span> <span class="pre">associated</span> <span class="pre">with</span> <span class="pre">an</span> <span class="pre">absent</span> <span class="pre">billing</span> <span class="pre">account.</span></code></p>
+<ul>
+<li><p>Make sure that billing is enabled for your Google Cloud Platform project <a class="reference external" href="https://cloud.google.com/billing/docs/how-to/modify-project">https://cloud.google.com/billing/docs/how-to/modify-project</a></p></li>
+</ul>
+</li>
+</ul>
+</details>
+<p>🏁 You are done with the GCP setup!</p>
+</section>
+</section>
+<section id="kitt">
+<h2>Kitt<a class="headerlink" href="#kitt" title="Permalink to this heading">#</a></h2>
+<p>:warning: If you have received an email from Le Wagon inviting you to sign up on Kitt (our learning platform), you can safely skip this step. Instead, please follow the instructions in the email you received if you haven’t done so already.</p>
+<p>If you are unsure about what to do, you can follow <a class="reference external" href="https://kitt.lewagon.com/">this link</a>. If you are already logged in, you can safely skip this section. If you are not logged in, click on <code class="docutils literal notranslate"><span class="pre">Enter</span> <span class="pre">Kitt</span> <span class="pre">as</span> <span class="pre">a</span> <span class="pre">Student</span></code>. If you manage to login, you can safely skip this step. Otherwise ask a teacher whether you should have received an email or follow the instructions below.</p>
+<p>Register as a Wagon alumni by going to <a class="reference external" href="http://kitt.lewagon.com/onboarding">kitt.lewagon.com/onboarding</a>. Select your batch, sign in with GitHub and enter all your information.</p>
+<p>Your teacher will then validate that you are indeed part of the batch. You can ask them to do it as soon as you completed the registration form.</p>
+<p>Once the teacher has approved your profile, go to your email inbox. You should have 2 emails:</p>
+<ul class="simple">
+<li><p>One from Slack, inviting you to the Le Wagon Alumni slack community (where you’ll chat with your buddies and all the previous alumni). Click on <strong>Join</strong> and fill the information.</p></li>
+<li><p>One from GitHub, inviting you to <code class="docutils literal notranslate"><span class="pre">lewagon</span></code> team. <strong>Accept it</strong> otherwise you won’t be able to access the lecture slides.</p></li>
+</ul>
+</section>
+<section id="slack">
+<h2>Slack<a class="headerlink" href="#slack" title="Permalink to this heading">#</a></h2>
+<p><a class="reference external" href="https://slack.com/">Slack</a> is a communcation platform pretty popular in the tech industry.</p>
+<section id="id2">
+<h3>Installation<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<p><a class="reference external" href="https://get.slack.help/hc/en-us/articles/212924728-Slack-for-Linux-beta-">Download the Slack app</a> and install it.</p>
+<p>:warning: If you are already using Slack in your browser, please download and install <strong>the desktop app</strong> which is fully featured.</p>
+</section>
+<section id="settings">
+<h3>Settings<a class="headerlink" href="#settings" title="Permalink to this heading">#</a></h3>
+<p>Launch the app and sign in to <code class="docutils literal notranslate"><span class="pre">lewagon-alumni</span></code> organization.</p>
+<p>Make sure you <strong>upload a profile picture</strong> :point_down:</p>
+<p><img alt="How to upload a profile picture on Slack" src="https://github.com/lewagon/setup/blob/master/images/slack_profile_picture.gif" /></p>
+<p>The idea is that you’ll have Slack open all day, so that you can share useful links / ask for help / decide where to go to lunch / etc.</p>
+<p>To ensure that everything is working fine for video calls, let’s test your camera and microphone:</p>
+<ul class="simple">
+<li><p>Open the Slack app</p></li>
+<li><p>Click your profile picture in the top right.</p></li>
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">Preferences</span></code> from the menu.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Audio</span> <span class="pre">&amp;</span> <span class="pre">video</span></code> in the left-side column.</p></li>
+<li><p>Below <code class="docutils literal notranslate"><span class="pre">Troubleshooting</span></code>, click <code class="docutils literal notranslate"><span class="pre">Run</span> <span class="pre">an</span> <span class="pre">audio,</span> <span class="pre">video</span> <span class="pre">and</span> <span class="pre">screensharing</span> <span class="pre">test</span></code>. The test will open in a new window.</p></li>
+<li><p>Check that your preferred speaker, microphone and camera devices appear in the drop-down menus, then click <code class="docutils literal notranslate"><span class="pre">Start</span> <span class="pre">test</span></code>.</p></li>
+</ul>
+<p><img alt="Check microphone and webcam with Slack" src="https://github.com/lewagon/setup/blob/master/images/slack_call_test.png" /></p>
+<p>:heavy_check_mark: When the test is finished, you should see green “Succeed” messages at least for your microphone and camera. :+1:</p>
+<p>:x: If not, <strong>contact a teacher</strong>.</p>
+<p>You can also install Slack app on your phone and sign in <code class="docutils literal notranslate"><span class="pre">lewagon-alumni</span></code>!</p>
+</section>
+</section>
+<section id="bonus-kata">
+<h2>(Bonus) Kata<a class="headerlink" href="#bonus-kata" title="Permalink to this heading">#</a></h2>
+<p>If you are done with your setup, please ask around if some classmates need some help with theirs (macOS, Linux, Windows). We will have our first lectures at 2pm and will talk about the Setup you just did + onboard you on Kitt.</p>
+<p>If you don’t have a lot of experience with <code class="docutils literal notranslate"><span class="pre">git</span></code> and GitHub, please <a class="reference external" href="https://www.youtube.com/watch?v=Z9fIBT2NBGY">(re-)watch this workshop</a> (<code class="docutils literal notranslate"><span class="pre">1.25</span></code> playback speed is fine).</p>
+<p>If you do, then you can wait for the first lecture working on this <a class="reference external" href="https://www.codewars.com/kata/5b817c2a0ce070ace8002be0/train/python">Tic-Tac-Toe Kata</a></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./ubuntu_python_zsh_conf"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#zoom">Zoom</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github-account">GitHub account</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-studio-code">Visual Studio Code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#launching-from-the-terminal">Launching from the terminal</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vs-code-extensions">VS Code Extensions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Installation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#live-share-configuration">Live Share configuration</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#command-line-tools">Command line tools</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zsh-git">Zsh &amp; Git</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#github-cli-installation">GitHub CLI installation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chrome-your-browser">Chrome - your browser</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#oh-my-zsh">Oh-my-zsh</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#direnv">direnv</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github-cli">GitHub CLI</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#google-cloud-cli">Google Cloud CLI</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dotfiles">Dotfiles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#disable-ssh-passphrase-prompt">Disable SSH passphrase prompt</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-python-with-pyenv">Installing Python (with <code class="docutils literal notranslate"><span class="pre">pyenv</span></code>)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uninstall-conda">Uninstall <code class="docutils literal notranslate"><span class="pre">conda</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-pyenv">Install <code class="docutils literal notranslate"><span class="pre">pyenv</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-python">Install Python</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-virtual-environment">Python Virtual Environment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-packages">Python packages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-notebook-extensions"><code class="docutils literal notranslate"><span class="pre">jupyter</span></code> notebook extensions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#custom-css">Custom CSS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jupyter-check-up"><code class="docutils literal notranslate"><span class="pre">jupyter</span></code> check up</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nbextensions-check-up"><code class="docutils literal notranslate"><span class="pre">nbextensions</span></code> check up</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-setup-check-up">Python setup check up</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dbeaver">DBeaver</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#docker">Docker 🐋</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-docker">Install Docker</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#google-cloud-platform-setup">Google Cloud Platform setup</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#project-setup">Project setup</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#account-language">Account language</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#billing-account">Billing account</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#enabling-gcp-services">Enabling GCP services</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#configure-cloud-sdk">Configure Cloud sdk</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-service-account-key">Create a service account key 🔑</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kitt">Kitt</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slack">Slack</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Installation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#settings">Settings</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bonus-kata">(Bonus) Kata</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Romain Noyer
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,706 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Flexbox</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'html_css_dev/css_07_flexbox';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Grid" href="css_08_grid.html" />
+    <link rel="prev" title="Media Queries" href="css_06_media_query.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">cheatsheets</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cheatsheets/pyenv.html">pyenv cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cheatsheets/git.html">Git cheatsheet</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">HTML/CSS</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="html_basics.html">HTML Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css_01_basics.html">CSS Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css_02_properties.html">CSS Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css_03_cascading.html">CSS Cascading</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="css_04_combining.html">Combining CSS selectors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css_05_display_float_clear_props.html">Properties: Display, Float and Clear</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css_06_media_query.html">Media Queries</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Flexbox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css_08_grid.html">Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="html_boilerplate.html">HTML Boilerplate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filepaths_basics.html">Filepaths Basics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Javascript ES6</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../javascript/js_01_basics.html">Javascript basics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Android development</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../android_dev/kotlin.html">Kotlin language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../android_dev/flutter.html">Flutter</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">jupyterbook samples</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../sample_content/markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sample_content/notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sample_content/markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/rnoyer/dev-notes-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/rnoyer/dev-notes-book/issues/new?title=Issue%20on%20page%20%2Fhtml_css_dev/css_07_flexbox.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/html_css_dev/css_07_flexbox.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Flexbox</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flexbox-display">Flexbox Display</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flexible-layout">Flexible layout</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-for-the-parent-flex-container">Properties for the parent: flex container</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#flex-direction">flex-direction:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#flex-wrap">flex-wrap:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#justify-content">justify-content:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#align-items-height-flex-wrap-nowrap">align-items (+height / +flex-wrap:nowrap;):</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#align-content-height-flex-wrap-wrap">align-content (+height / +flex-wrap:wrap;):</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-for-the-clidren-flex-items">Properties for the clidren: flex items</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#order">order:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#align-self">align-self:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flex-sizing-flex-items-properties">Flex sizing (flex items properties)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#width">width:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flex-basis">flex-basis:</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#min-width-max-width">min-width: / max-width:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#flex-grow">flex-grow:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#flex-shrink">flex-shrink:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#flex">flex:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="flexbox">
+<h1>Flexbox<a class="headerlink" href="#flexbox" title="Permalink to this heading">#</a></h1>
+<section id="flexbox-display">
+<h2>Flexbox Display<a class="headerlink" href="#flexbox-display" title="Permalink to this heading">#</a></h2>
+<p>display: flex;
+display: inline-flex;</p>
+<p>flex-basis: 100px</p>
+</section>
+<section id="flexible-layout">
+<h2>Flexible layout<a class="headerlink" href="#flexible-layout" title="Permalink to this heading">#</a></h2>
+<p>Test properties here: <a class="reference external" href="https://appbrewery.github.io/flex-layout/">https://appbrewery.github.io/flex-layout/</a></p>
+<section id="properties-for-the-parent-flex-container">
+<h3>Properties for the parent: flex container<a class="headerlink" href="#properties-for-the-parent-flex-container" title="Permalink to this heading">#</a></h3>
+<section id="flex-direction">
+<h4>flex-direction:<a class="headerlink" href="#flex-direction" title="Permalink to this heading">#</a></h4>
+<p>Define the main axis, and therefore the cross axis.</p>
+<ul class="simple">
+<li><p>row; (default)</p></li>
+<li><p>column;</p></li>
+</ul>
+</section>
+<section id="flex-wrap">
+<h4>flex-wrap:<a class="headerlink" href="#flex-wrap" title="Permalink to this heading">#</a></h4>
+<p>Manage the way items will behave if there is not enough space to fit all the items on screen in one single line.</p>
+<ul class="simple">
+<li><p>nowrap; (default) Items will stay aligned, and will be off the screen.</p></li>
+<li><p>wrap; items will automatically move on to the next line.</p></li>
+</ul>
+</section>
+<section id="justify-content">
+<h4>justify-content:<a class="headerlink" href="#justify-content" title="Permalink to this heading">#</a></h4>
+<p>How items behave when there is more space than needed in the main axis.</p>
+<ul class="simple">
+<li><p>Flex-start; / flex-end; items are placed to the left / right</p></li>
+<li><p>center; will center all items in the middle</p></li>
+<li><p>space-between; / space-around; / space-evenly; will separate items with space between, according to the corresponding property.</p></li>
+</ul>
+</section>
+<section id="align-items-height-flex-wrap-nowrap">
+<h4>align-items (+height / +flex-wrap:nowrap;):<a class="headerlink" href="#align-items-height-flex-wrap-nowrap" title="Permalink to this heading">#</a></h4>
+<p>Manage the position of items along the cross-axis. It will use the space defined by the ‘height’ property.</p>
+<ul class="simple">
+<li><p>Flex-start; / flex-end; / enter; / baseline; / stretch; Behave accordingly.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>/!\ When flex-wrap is set to &#39;wrap&#39; the property &#39;align-items (+height)&#39; is disabled. align-content (+height)&#39; is the only property able to manage items on the cross axis.
+</pre></div>
+</div>
+</section>
+<section id="align-content-height-flex-wrap-wrap">
+<h4>align-content (+height / +flex-wrap:wrap;):<a class="headerlink" href="#align-content-height-flex-wrap-wrap" title="Permalink to this heading">#</a></h4>
+<p>Manage the position of items along the cross axis WHEN flex-wrap is set to ‘wrap’, which means items will move to multiple lines when the screen get to short.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>/!\ When flex-wrap is set to &#39;wrap&#39; the property &#39;align-items (+height)&#39; is disabled. align-content (+height)&#39; is the only property able to manage items on the cross axis.
+</pre></div>
+</div>
+</section>
+</section>
+<section id="properties-for-the-clidren-flex-items">
+<h3>Properties for the clidren: flex items<a class="headerlink" href="#properties-for-the-clidren-flex-items" title="Permalink to this heading">#</a></h3>
+<section id="order">
+<h4>order:<a class="headerlink" href="#order" title="Permalink to this heading">#</a></h4>
+<p>Allow to rearrange items order.</p>
+<ul class="simple">
+<li><p>Bigger number are placed at the end.</p></li>
+<li><p>Default value is 0.</p></li>
+<li><p>Negative number are possible</p></li>
+</ul>
+</section>
+<section id="align-self">
+<h4>align-self:<a class="headerlink" href="#align-self" title="Permalink to this heading">#</a></h4>
+<p>Allow a specific item to over rule the ‘align-items’ property</p>
+<ul class="simple">
+<li><p>Flex-start; / flex-end; / enter; / baseline; / stretch; Same behavior as ‘align-items’.</p></li>
+</ul>
+</section>
+</section>
+<section id="flex-sizing-flex-items-properties">
+<h3>Flex sizing (flex items properties)<a class="headerlink" href="#flex-sizing-flex-items-properties" title="Permalink to this heading">#</a></h3>
+<p>An item max-size and min-size is define with multiple properties.
+The algorithm will in order, look if min/max-width is set and apply it. If not, look for flex-basis, etc.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">content</span> <span class="n">width</span> <span class="o">&lt;&lt;</span> <span class="n">width</span><span class="p">:;</span> <span class="o">&lt;&lt;</span> <span class="n">flex</span><span class="o">-</span><span class="n">basis</span><span class="p">:;</span> <span class="o">&lt;&lt;</span> <span class="nb">min</span><span class="o">-</span><span class="n">width</span><span class="p">:</span> <span class="o">/</span> <span class="nb">max</span><span class="o">-</span><span class="n">width</span><span class="p">:;</span>
+</pre></div>
+</div>
+<section id="width">
+<h4>width:<a class="headerlink" href="#width" title="Permalink to this heading">#</a></h4>
+<p>As long as there is enough space, this parameter will be implemented. If there is not enough space, item will shrink to its minimum ‘content width’.</p>
+</section>
+</section>
+<section id="flex-basis">
+<h3>flex-basis:<a class="headerlink" href="#flex-basis" title="Permalink to this heading">#</a></h3>
+<p>The ‘flex-basis:’ property overide the ‘width:’ property.</p>
+<ul class="simple">
+<li><p>flex-basis: auto; (default) will automatically set space to items, depending on the amount of text in it. (which is weird).</p></li>
+<li><p>flex-basis: 0; will give <strong>equal</strong> space to every items.</p></li>
+<li><p>flex-basis: 1;</p></li>
+<li><p>flex-basis: 100px;</p></li>
+</ul>
+<section id="min-width-max-width">
+<h4>min-width: / max-width:<a class="headerlink" href="#min-width-max-width" title="Permalink to this heading">#</a></h4>
+<p>Will overide the ‘flex-basis’ and ‘width:’ properties, <strong>unless they are inside the boundaries of the ‘min/max-width’ properties.</strong></p>
+<p>By default: lets assume our item contain a paragraph with multiple words in it.</p>
+<ul class="simple">
+<li><p>min-width is equal to the longest word.</p></li>
+<li><p>max-width is  equal to the total length of all the words.</p></li>
+<li><p>It can be set manually with a custom value.</p></li>
+</ul>
+</section>
+<section id="flex-grow">
+<h4>flex-grow:<a class="headerlink" href="#flex-grow" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>‘0’: Restrict item only to grow until its ‘flex-basis’ size at max.</p></li>
+<li><p>‘1’: allow item stretch to occupy the whole container, ignoring flex-basis if there is more room available.</p></li>
+</ul>
+</section>
+<section id="flex-shrink">
+<h4>flex-shrink:<a class="headerlink" href="#flex-shrink" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>‘0’: Restrict item only to shrink until its ‘flex-basis’ size at max.</p></li>
+<li><p>‘1’: allow item shrink to the ‘min-width:’, ignoring flex-basis if there is not enough space.</p></li>
+</ul>
+</section>
+<section id="flex">
+<h4>flex:<a class="headerlink" href="#flex" title="Permalink to this heading">#</a></h4>
+<p>As grow:, shrink: and flex-basis:</p>
+<ul class="simple">
+<li><p>flex: 1 1 0; set in order: grow shrink flex-basis</p></li>
+<li><p>flex: 1; set automatically grow, shrink and flex-basis to 1 1 0.</p></li>
+<li><p>flex: 2; change the ratio of an item. In this example, the item will takes twice the size of a regular item.</p></li>
+</ul>
+</section>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./html_css_dev"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="css_06_media_query.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Media Queries</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="css_08_grid.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Grid</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flexbox-display">Flexbox Display</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flexible-layout">Flexible layout</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-for-the-parent-flex-container">Properties for the parent: flex container</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#flex-direction">flex-direction:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#flex-wrap">flex-wrap:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#justify-content">justify-content:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#align-items-height-flex-wrap-nowrap">align-items (+height / +flex-wrap:nowrap;):</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#align-content-height-flex-wrap-wrap">align-content (+height / +flex-wrap:wrap;):</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#properties-for-the-clidren-flex-items">Properties for the clidren: flex items</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#order">order:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#align-self">align-self:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flex-sizing-flex-items-properties">Flex sizing (flex items properties)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#width">width:</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flex-basis">flex-basis:</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#min-width-max-width">min-width: / max-width:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#flex-grow">flex-grow:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#flex-shrink">flex-shrink:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#flex">flex:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Romain Noyer
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
