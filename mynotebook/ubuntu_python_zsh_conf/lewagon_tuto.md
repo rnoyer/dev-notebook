@@ -223,7 +223,7 @@ If asked "Do you want to change your default shell to zsh?", press `Y`
 
 At the end your terminal should look like this:
 
-![Ubuntu terminal with OhMyZsh](https://github.com/lewagon/setup/blob/master/images/oh_my_zsh.png)
+![Ubuntu terminal with OhMyZsh](../assets/conf_zsh_images/oh_my_zsh.png)
 
 :heavy_check_mark: If it does, you can continue :+1:
 
