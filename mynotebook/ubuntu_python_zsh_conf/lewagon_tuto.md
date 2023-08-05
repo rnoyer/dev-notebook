@@ -25,7 +25,7 @@ If you already have a Zoom account, sign in using your credentials.
 
 If not, click on the **Sign Up Free** link:
 
-![Sign Up Free to Zoom](https://github.com/lewagon/setup/blob/master/images/zoom_sign_up_free.png)
+![Sign Up Free to Zoom](../assets/conf_zsh_images/zoom_sign_up_free.png)
 
 You will be redirected to Zoom's website to complete a form.
 
