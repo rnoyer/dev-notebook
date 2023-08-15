@@ -392,7 +392,13 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparators">Comparators</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combinors">Combinors</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-statements-if-else">Control statements: If-Else</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-statements">Control statements:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-else">If-Else</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#while">While</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loops">For loops</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#switch">Switch</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arrays">Arrays</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-functions">Common functions</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#browser-popups-related">Browser popups related</a></li>
@@ -523,24 +529,46 @@ document.write(`
 </tbody>
 </table>
 </section>
-<section id="control-statements-if-else">
-<h2>Control statements: If-Else<a class="headerlink" href="#control-statements-if-else" title="Permalink to this heading">#</a></h2>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="nx">track</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;clear&quot;</span><span class="p">){</span>
-<span class="w">  </span><span class="nx">goStraight</span><span class="p">();</span>
+<section id="control-statements">
+<h2>Control statements:<a class="headerlink" href="#control-statements" title="Permalink to this heading">#</a></h2>
+<section id="if-else">
+<h3>If-Else<a class="headerlink" href="#if-else" title="Permalink to this heading">#</a></h3>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="nx">condition</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="kc">true</span><span class="p">){</span>
+<span class="w">  </span><span class="cm">/* do something */</span>
 <span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="p">{</span>
 <span class="w">  </span><span class="nx">turnRight</span><span class="p">();</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">50</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">condition1</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="cm">/* do something */</span>
-<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">condition2</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="cm">/* do something */</span>
 <span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="cm">/* do something */</span>
 <span class="p">}</span>
 </pre></div>
 </div>
+</section>
+<section id="while">
+<h3>While<a class="headerlink" href="#while" title="Permalink to this heading">#</a></h3>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="k">while</span><span class="p">(</span><span class="nx">condition</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="kc">true</span><span class="p">){</span>
+<span class="w">  </span><span class="c1">//instructions</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="for-loops">
+<h3>For loops<a class="headerlink" href="#for-loops" title="Permalink to this heading">#</a></h3>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="k">for</span><span class="p">(</span><span class="nx">startcondition</span><span class="p">;</span><span class="w"> </span><span class="nx">endcondition</span><span class="p">;</span><span class="w"> </span><span class="nx">action</span><span class="p">){</span>
+<span class="w">  </span><span class="c1">//instructions</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="switch">
+<h3>Switch<a class="headerlink" href="#switch" title="Permalink to this heading">#</a></h3>
+</section>
 </section>
 <section id="arrays">
 <h2>Arrays<a class="headerlink" href="#arrays" title="Permalink to this heading">#</a></h2>
@@ -568,7 +596,7 @@ document.write(`
 <ul class="simple">
 <li><p>Adding item to the end</p></li>
 </ul>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">myArray</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">&quot;u&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// myArray is apdated with a &#39;u&#39; at its end.</span>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">myArray</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">&quot;u&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// myArray is updated with a &#39;u&#39; at its end.</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -577,6 +605,9 @@ document.write(`
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">myArray</span><span class="p">.</span><span class="nx">pop</span><span class="p">());</span><span class="w"> </span><span class="c1">// myArray is apdated with a &#39;u&#39; at its end.</span>
 </pre></div>
 </div>
+<ul class="simple">
+<li></li>
+</ul>
 </section>
 <section id="common-functions">
 <h2>Common functions<a class="headerlink" href="#common-functions" title="Permalink to this heading">#</a></h2>
@@ -773,7 +804,13 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparators">Comparators</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combinors">Combinors</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-statements-if-else">Control statements: If-Else</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-statements">Control statements:</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#if-else">If-Else</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#while">While</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loops">For loops</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#switch">Switch</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arrays">Arrays</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-functions">Common functions</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#browser-popups-related">Browser popups related</a></li>

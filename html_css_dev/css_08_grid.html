@@ -383,16 +383,19 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#css-grid-terms">CSS grid terms:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-display">Grid display</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-sizing">Grid sizing</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-template-rows-grid-template-columns-grid-container">grid-template-rows / grid-template-columns (grid container):</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-auto-rows">grid-auto-rows</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-template-rows-grid-template-columns-grid-container">grid-template-rows: / grid-template-columns: (grid container):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-template">grid-template:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-auto-rows-grid-auto-columns">grid-auto-rows / grid-auto-columns</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-item-placement">Grid Item Placement</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-column-grid-row">grid-column (+ grid-row):</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-column-start-grid-row-start">grid-column-start (+ grid-row-start):</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-column-end-grid-row-end">grid-column-end (+ grid-row-end):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-area">grid area:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#order">order:</a></li>
 </ul>
 </li>
@@ -409,7 +412,17 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="grid">
 <h1>Grid<a class="headerlink" href="#grid" title="Permalink to this heading">#</a></h1>
-<p>As Flexbox is meant to manage 1D lyout, such as row or columns, grid is designed to handle 2D layout, such as a table.</p>
+<p>As Flexbox is meant to manage 1D layout, such as row or columns, grid is designed to handle 2D layout, such as a table.</p>
+<section id="css-grid-terms">
+<h2>CSS grid terms:<a class="headerlink" href="#css-grid-terms" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Grid containers:</strong> Main ‘&lt;div&gt;’ containing the whole layout.</p></li>
+<li><p><strong>Grid items:</strong> Items created inside the container (usually ‘&lt;div&gt;’).</p></li>
+<li><p><strong>Grid Tracks (row tracks / columns tracks):</strong> Every columns and rows defined with ‘grid-template-rows / -columns’ are tracks.</p></li>
+<li><p><strong>Grid cells:</strong> Smallest unit in a container. Grid items are composed with one or more cells.</p></li>
+<li><p><strong>Grid lines :</strong> Gaps between items. Each line have a corresponding number starting at 1.</p></li>
+</ul>
+</section>
 <section id="grid-display">
 <h2>Grid display<a class="headerlink" href="#grid-display" title="Permalink to this heading">#</a></h2>
 <div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span>
@@ -417,6 +430,7 @@ document.write(`
 <span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
 <span class="w">  </span><span class="k">grid-template-columns</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="p">;</span>
 <span class="w">  </span><span class="k">grid-template-rows</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="p">;</span>
+<span class="w">  </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -424,32 +438,52 @@ document.write(`
 <section id="grid-sizing">
 <h2>Grid sizing<a class="headerlink" href="#grid-sizing" title="Permalink to this heading">#</a></h2>
 <section id="grid-template-rows-grid-template-columns-grid-container">
-<h3>grid-template-rows / grid-template-columns (grid container):<a class="headerlink" href="#grid-template-rows-grid-template-columns-grid-container" title="Permalink to this heading">#</a></h3>
+<h3>grid-template-rows: / grid-template-columns: (grid container):<a class="headerlink" href="#grid-template-rows-grid-template-columns-grid-container" title="Permalink to this heading">#</a></h3>
+<p>These two parameters allows to define the global grid layout in the container. It defines:</p>
 <ul class="simple">
-<li><p>Fixed size: 10px 10px 20px;</p></li>
-<li><p>Fractional size: 1fr 1fr 2fr;</p></li>
-<li><p>Minmax size: minmax(10px, 20px);</p></li>
-<li><p>Repeat: repeat(3, 10px);</p></li>
-<li><p>Auto size: auto;</p></li>
+<li><p>The number of rows and columns</p></li>
+<li><p>The size of each cells (items)</p></li>
 </ul>
+<p>Items can be defined with differents attributes:</p>
+<ul class="simple">
+<li><p>Fixed size: 10px 10px 20px; // Not responsive.</p></li>
+<li><p>Fractional size: 1fr 1fr 2fr; // Ratios.</p></li>
+<li><p>Minmax size: minmax(10px, 20px); // Set limits to grow and shrink.</p></li>
+<li><p>Repeat: repeat(3, 10px); // Apply same attributes multiple times (Here 3x 10px).</p></li>
+<li><p>Auto size: auto; //</p></li>
+</ul>
+<p>Examples:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
+<span class="w">  </span><span class="k">grid-template-rows</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="kc">auto</span><span class="p">;</span><span class="c">/* The 2nd row (auto) will fit to its content. */</span>
+<span class="w">  </span><span class="k">grid-template-columns</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="w"> </span><span class="kc">auto</span><span class="p">;</span><span class="c">/*The 2nd col. will fill the remaining screen width. */</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </section>
-<section id="grid-auto-rows">
-<h3>grid-auto-rows<a class="headerlink" href="#grid-auto-rows" title="Permalink to this heading">#</a></h3>
+<section id="grid-template">
+<h3>grid-template:<a class="headerlink" href="#grid-template" title="Permalink to this heading">#</a></h3>
+<p>Will define ‘grid-template-rows’ and ‘grid-template-columns’ in one line:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
+<span class="w">  </span><span class="k">grid-template</span><span class="p">:</span><span class="w"> </span><span class="c">/*rows attributes*/</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="c">/*columns attributes*/</span><span class="w"> </span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="grid-auto-rows-grid-auto-columns">
+<h3>grid-auto-rows / grid-auto-columns<a class="headerlink" href="#grid-auto-rows-grid-auto-columns" title="Permalink to this heading">#</a></h3>
+<p>These parameters defines how extra items should behave. <br/>
+It takes sames attributes as ‘grid-template-rows / -columns’.</p>
 </section>
 </section>
 <section id="grid-item-placement">
 <h2>Grid Item Placement<a class="headerlink" href="#grid-item-placement" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Grid containers</p></li>
-<li><p>Grid items</p></li>
-<li><p>Grid cells</p></li>
-<li><p>Grid Tracks (row tracks / columns tracks)</p></li>
-<li><p>Grid lines (gap)</p></li>
-</ul>
 <section id="grid-column-grid-row">
 <h3>grid-column (+ grid-row):<a class="headerlink" href="#grid-column-grid-row" title="Permalink to this heading">#</a></h3>
+<p>This parameter define how many cells the item will occupy horizontally (grid-column) and vertically (grid-row).</p>
 <ul class="simple">
-<li><p>span 2:</p></li>
+<li><p>span 2: will spread over 2 cells.</p></li>
 <li><p>4 / 6: (start / end)</p></li>
 <li><p>auto:</p></li>
 <li><p>20%:</p></li>
@@ -457,12 +491,35 @@ document.write(`
 </section>
 <section id="grid-column-start-grid-row-start">
 <h3>grid-column-start (+ grid-row-start):<a class="headerlink" href="#grid-column-start-grid-row-start" title="Permalink to this heading">#</a></h3>
+<p>Override items default placement, giving the starting line of the item.</p>
 </section>
 <section id="grid-column-end-grid-row-end">
 <h3>grid-column-end (+ grid-row-end):<a class="headerlink" href="#grid-column-end-grid-row-end" title="Permalink to this heading">#</a></h3>
+<p>Override items default placement, giving the ending line of the item.</p>
+</section>
+<section id="grid-area">
+<h3>grid area:<a class="headerlink" href="#grid-area" title="Permalink to this heading">#</a></h3>
+<p>This property concatenate successively:</p>
+<ol class="arabic simple">
+<li><p>grid-column-start</p></li>
+<li><p>grid-row-start</p></li>
+<li><p>grid-column-end</p></li>
+<li><p>grid-row-end</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>/!\ If &quot;grid-area&quot; is used for one item, it should be used for all the other items in order to work properly.
+</pre></div>
+</div>
+<p>Example:</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span>.item {
+grid area: 2 / 1 / 3 / 3;
+}
+</pre></div>
+</div>
 </section>
 <section id="order">
 <h3>order:<a class="headerlink" href="#order" title="Permalink to this heading">#</a></h3>
+<p>Each item is placed by default, following is predecessor, and placed from left to right and from top to bottom.</p>
+<p>The ‘order’ property overwrite this behavior and allow to cutomize the order of the items. Default is ‘0’.</p>
 </section>
 </section>
 </section>
@@ -534,16 +591,19 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#css-grid-terms">CSS grid terms:</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-display">Grid display</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-sizing">Grid sizing</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-template-rows-grid-template-columns-grid-container">grid-template-rows / grid-template-columns (grid container):</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-auto-rows">grid-auto-rows</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-template-rows-grid-template-columns-grid-container">grid-template-rows: / grid-template-columns: (grid container):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-template">grid-template:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-auto-rows-grid-auto-columns">grid-auto-rows / grid-auto-columns</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-item-placement">Grid Item Placement</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-column-grid-row">grid-column (+ grid-row):</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-column-start-grid-row-start">grid-column-start (+ grid-row-start):</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-column-end-grid-row-end">grid-column-end (+ grid-row-end):</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#grid-area">grid area:</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#order">order:</a></li>
 </ul>
 </li>

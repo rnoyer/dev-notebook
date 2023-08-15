@@ -5,7 +5,7 @@ Each element is contained in a box.
 Different properties will modify box aspect and size.
 
 - Height and Width: Will change the size of the inner box, its content space.
-- Border : Border can be added and customized. It doesn not affect the inside box size;
+- Border : Border can be added and customized. It does not affect the inside box size;
 - Padding: Space between content and border
 - Margin: Space between the border and any other content in the wabpage
 
@@ -33,7 +33,7 @@ div{
 }
 ```
 ## CSS positioning
-<img src="../images/css_positions.png" />
+<img src="../assets/images/css_positions.png" />
 
 ### position: static
 HTML default flow: elements are placed at the bottom of the previous element.
@@ -47,7 +47,7 @@ Nearest positionned ancestor, or else top left corner of the webpage.
 ### position: fixed
 Position relative to the top left corner of the browser. It will follow when scrolling.
 
-### position: z-index
+### z-index
 This value determines which element appear on top of other element (on z-axis).
 
 Value goes from -infinity to +100. The higher the number, the upper it is on the z-axis.
