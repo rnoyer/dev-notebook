@@ -58,4 +58,4 @@ h1{
 ```
 
 # Summarize
-<img src="../images/css_cascading.png">
+<img src="../assets/images/css_cascading.png">

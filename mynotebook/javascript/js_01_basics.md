@@ -54,23 +54,38 @@ var y = false;
 |\|\      | OR          |
 |!        | NOT / The opposite|
 |||
-## Control statements: If-Else
+## Control statements:
+### If-Else
 ```js
-if(track === "clear"){
-  goStraight();
+if(condition === true){
+  /* do something */
 } else{
   turnRight();
 }
 ```
 ```js
-if (x > 50) {
+if (condition1 === true) {
   /* do something */
-} else if (x > 5) {
+} else if (condition2 === true) {
   /* do something */
 } else {
   /* do something */
 }
 ```
+### While
+```js
+while(condition === true){
+  //instructions
+}
+```
+### For loops
+```js
+for(startcondition; endcondition; action){
+  //instructions
+}
+```
+### Switch
+
 
 ## Arrays
 ```js
@@ -90,12 +105,14 @@ myArray.includes("t"); // Return a bool, here 'True'
 ```
 - Adding item to the end
 ```js
-myArray.push("u"); // myArray is apdated with a 'u' at its end.
+myArray.push("u"); // myArray is updated with a 'u' at its end.
 ```
 - Return and delete last item
 ```js
 myArray.pop()); // myArray is apdated with a 'u' at its end.
 ```
+-
+
 
 ## Common functions
 

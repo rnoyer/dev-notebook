@@ -1,16 +1,16 @@
 # CSS Basics
-CSS means Cascading Style Sheets. It will define how HTML elements will be displayed, using custom parameters. 
+CSS means Cascading Style Sheets. It will define how HTML elements will be displayed, using custom parameters.
 ## CSS implementations
 3 Ways of adding CSS in a webpage: Inline, Internal and External
 
-## Inline 
+## Inline
 ```html
 <tag style="css" />
 ```
 It goes within the same line of a particular html element using a "style" attribute.
 It is not recommanded to use inline styles for an entire webpage. It is used for very specific section, for testing purpose, or when you want to change only one element.
 
-## Internal 
+## Internal
 ```html
 <head>
     [...]
@@ -21,11 +21,11 @@ It is not recommanded to use inline styles for an entire webpage. It is used for
 All of the css is stored inside the element \<style>\</style> inside the head element of the page.
 
 
-## External 
+## External
 ```html
 <head>
     [...]
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
     [...]
 ```
 A separate file contains all of the CSS properties. In the HTML page the CSS file is called with an \<link /> element.
