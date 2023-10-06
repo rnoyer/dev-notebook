@@ -31,5 +31,5 @@ Main usage: Paragraph wrap an image just like in a newspapers.
 - Will cancel the 'float: left' outcomes.
 ### clear: right
 - Will cancel the 'float: right' outcomes.
-### clear:
+### clear: both
 - Will cancel both 'float: left' and 'float: right' outcomes.

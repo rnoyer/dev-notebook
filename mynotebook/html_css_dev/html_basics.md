@@ -105,3 +105,15 @@ Attributes:
 <!-- HTML file -->
 <img src="https://picsum.photos/100" alt="randomly generated photo"/>
 ```
+
+## Forms
+
+[See Openclassrooms course here.](https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3/8061492-creez-des-formulaires)
+```html
+<!-- HTML file -->
+<form method="get" action="">
+  <p>Some text inside the form</p>
+  <label>City: </label >
+  <input type="text" placeholder="Marseille, France" name="city" id="city" />
+</form>
+```

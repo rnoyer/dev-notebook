@@ -7,7 +7,9 @@ Different properties will modify box aspect and size.
 - Height and Width: Will change the size of the inner box, its content space.
 - Border : Border can be added and customized. It does not affect the inside box size;
 - Padding: Space between content and border
-- Margin: Space between the border and any other content in the wabpage
+- Margin: Space between the border and any other content in the webpage.
+
+<img src="../assets/images/css_boxmodel.png">
 
 ## Ways to pass values to padding, margin and border-width properties
 

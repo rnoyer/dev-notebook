@@ -41,7 +41,7 @@ Manage the position of items along the cross axis WHEN flex-wrap is set to 'wrap
 ```
 /!\ When flex-wrap is set to 'wrap' the property 'align-items (+height)' is disabled. align-content (+height)' is the only property able to manage items on the cross axis.
 ```
-### Properties for the clidren: flex items
+### Properties for the children: flex items
 
 #### order:
 Allow to rearrange items order.
