@@ -109,9 +109,8 @@ myArray.push("u"); // myArray is updated with a 'u' at its end.
 ```
 - Return and delete last item
 ```js
-myArray.pop()); // myArray is apdated with a 'u' at its end.
+myArray.pop(); // Return the last item and delete it from the list.
 ```
--
 
 
 ## Common functions

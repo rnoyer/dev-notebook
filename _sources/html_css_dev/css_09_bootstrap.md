@@ -24,3 +24,4 @@ Multiple breakpoints:
   <div class="col-sm-12 col-md-8 col-lg-4"></div>
 </div>
 ```
+See documentation for breakpoints list: https://getbootstrap.com/docs/5.0/layout/breakpoints/
