@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>CSS Properties</title>
+    <title>Sass basics</title>
   
   
   
@@ -62,11 +62,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'html_css_dev/css_02_properties';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'html_css_dev/css_11_sass_basics';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="CSS Cascading" href="css_03_cascading.html" />
-    <link rel="prev" title="CSS Basics" href="css_01_basics.html" />
+    <link rel="next" title="CSS Animations" href="css_12_animation.html" />
+    <link rel="prev" title="BEM Convention" href="css_10_bem_basics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -171,7 +171,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="html_basics.html">HTML Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="css_01_basics.html">CSS Basics</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">CSS Properties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="css_02_properties.html">CSS Properties</a></li>
 <li class="toctree-l1"><a class="reference internal" href="css_03_cascading.html">CSS Cascading</a></li>
 
 <li class="toctree-l1"><a class="reference internal" href="css_04_combining.html">Combining CSS selectors</a></li>
@@ -181,7 +181,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="css_08_grid.html">Grid</a></li>
 <li class="toctree-l1"><a class="reference internal" href="css_09_bootstrap.html">Bootstrap Framework basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="css_10_bem_basics.html">BEM Convention</a></li>
-<li class="toctree-l1"><a class="reference internal" href="css_11_sass_basics.html">Sass basics</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Sass basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="css_12_animation.html">CSS Animations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="html_boilerplate.html">HTML Boilerplate</a></li>
 <li class="toctree-l1"><a class="reference internal" href="filepaths_basics.html">Filepaths Basics</a></li>
@@ -278,7 +278,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/rnoyer/dev-notes-book/issues/new?title=Issue%20on%20page%20%2Fhtml_css_dev/css_02_properties.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/rnoyer/dev-notes-book/issues/new?title=Issue%20on%20page%20%2Fhtml_css_dev/css_11_sass_basics.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -308,7 +308,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/html_css_dev/css_02_properties.md" target="_blank"
+      <li><a href="../_sources/html_css_dev/css_11_sass_basics.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -390,7 +390,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>CSS Properties</h1>
+    <h1>Sass basics</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -400,14 +400,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#css-box-model">CSS Box model</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ways-to-pass-values-to-padding-margin-and-border-width-properties">Ways to pass values to padding, margin and border-width properties</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#css-positioning">CSS positioning</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#position-static">position: static</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#position-relative">position: relative</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#position-absolute">position: absolute</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#position-fixed">position: fixed</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#z-index">z-index</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sass-syntax">.sass syntax</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scss-syntax">scss syntax</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main-specificities">Main specificities:</a></li>
 </ul>
 </li>
 </ul>
@@ -421,75 +416,87 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="css-properties">
-<h1>CSS Properties<a class="headerlink" href="#css-properties" title="Permalink to this heading">#</a></h1>
-<section id="css-box-model">
-<h2>CSS Box model<a class="headerlink" href="#css-box-model" title="Permalink to this heading">#</a></h2>
-<p>Each element is contained in a box.
-Different properties will modify box aspect and size.</p>
-<ul class="simple">
-<li><p>Height and Width: Will change the size of the inner box, its content space.</p></li>
-<li><p>Border : Border can be added and customized. It does not affect the inside box size;</p></li>
-<li><p>Padding: Space between content and border</p></li>
-<li><p>Margin: Space between the border and any other content in the webpage.</p></li>
-</ul>
-<p><img alt="boxmodel" src="../_images/css_boxmodel.png" /></p>
-</section>
-<section id="ways-to-pass-values-to-padding-margin-and-border-width-properties">
-<h2>Ways to pass values to padding, margin and border-width properties<a class="headerlink" href="#ways-to-pass-values-to-padding-margin-and-border-width-properties" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>1 value for all box sides.</p></li>
-</ul>
-<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="c">/* Top - Right - Bottom - Left */</span>
-<span class="nt">div</span><span class="p">{</span>
-<span class="w">    </span><span class="k">padding</span><span class="p">:</span><span class="mi">0</span><span class="kt">px</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>4 values for each sides of the box. Clockwise, starting from top.</p></li>
-</ul>
-<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="c">/* Top - Right - Bottom - Left */</span>
-<span class="nt">div</span><span class="p">{</span>
-<span class="w">    </span><span class="k">padding</span><span class="p">:</span><span class="mi">0</span><span class="kt">px</span><span class="w"> </span><span class="mi">0</span><span class="kt">px</span><span class="w"> </span><span class="mi">0</span><span class="kt">px</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>2 values for opposites sides of the box.</p></li>
-</ul>
-<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="c">/* Top+Bottom  - Right+Left */</span>
-<span class="nt">div</span><span class="p">{</span>
-<span class="w">    </span><span class="k">padding</span><span class="p">:</span><span class="mi">0</span><span class="kt">px</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span>
-<span class="p">}</span>
+  <section class="tex2jax_ignore mathjax_ignore" id="sass-basics">
+<h1>Sass basics<a class="headerlink" href="#sass-basics" title="Permalink to this heading">#</a></h1>
+<p>Sass allows to write CSS code with a different syntax : concise and readable.</p>
+<p>There is two types of syntax, and therefor, two types of files:</p>
+<section id="sass-syntax">
+<h2>.sass syntax<a class="headerlink" href="#sass-syntax" title="Permalink to this heading">#</a></h2>
+<p>Python like syntax: works with indentations and line breaks:</p>
+<div class="highlight-sass notranslate"><div class="highlight"><pre><span></span>.nav
+  text-align: right
+
+ .nav__link
+    font-size: 15px
+    padding-left: 30px
+
+  .nav__link--purple
+      color: #a5b4fc;
 </pre></div>
 </div>
 </section>
-<section id="css-positioning">
-<h2>CSS positioning<a class="headerlink" href="#css-positioning" title="Permalink to this heading">#</a></h2>
-<p><img alt="css-positioning" src="../_images/css_positions.png" /></p>
-<section id="position-static">
-<h3>position: static<a class="headerlink" href="#position-static" title="Permalink to this heading">#</a></h3>
-<p>HTML default flow: elements are placed at the bottom of the previous element.</p>
-</section>
-<section id="position-relative">
-<h3>position: relative<a class="headerlink" href="#position-relative" title="Permalink to this heading">#</a></h3>
-<p>Position will be relative to the static (default) position.</p>
-</section>
-<section id="position-absolute">
-<h3>position: absolute<a class="headerlink" href="#position-absolute" title="Permalink to this heading">#</a></h3>
-<p>Nearest positionned ancestor, or else top left corner of the webpage.</p>
-</section>
-<section id="position-fixed">
-<h3>position: fixed<a class="headerlink" href="#position-fixed" title="Permalink to this heading">#</a></h3>
-<p>Position relative to the top left corner of the browser. It will follow when scrolling.</p>
-</section>
-<section id="z-index">
-<h3>z-index<a class="headerlink" href="#z-index" title="Permalink to this heading">#</a></h3>
-<p>This value determines which element appear on top of other element (on z-axis).</p>
-<p>Value goes from -infinity to +100. The higher the number, the upper it is on the z-axis.</p>
-<p>By default, z-index is set to 0.</p>
-<p>If position is set to ‘absolute’, then the element is put by default on an upper layer. So even with an equal number, ‘absolute’ appears upper.</p>
+<section id="scss-syntax">
+<h2>scss syntax<a class="headerlink" href="#scss-syntax" title="Permalink to this heading">#</a></h2>
+<div class="highlight-scss notranslate"><div class="highlight"><pre><span></span><span class="nc">.nav</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">text-align</span><span class="nd">:</span><span class="w"> </span><span class="nt">right</span><span class="o">;</span>
+<span class="w">    </span><span class="nc">.nav__link</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">font-size</span><span class="nd">:</span><span class="w"> </span><span class="nt">15px</span><span class="o">;</span>
+<span class="w">        </span><span class="nt">padding-left</span><span class="nd">:</span><span class="w"> </span><span class="nt">30px</span><span class="o">;</span>
+<span class="w">        </span><span class="nc">.nav__link--purple</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nn">#a5b4fc</span><span class="o">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<section id="main-specificities">
+<h3>Main specificities:<a class="headerlink" href="#main-specificities" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Selectors can be nested</p></li>
+<li><p>Variables:</p></li>
+</ul>
+<div class="highlight-scss notranslate"><div class="highlight"><pre><span></span>$main-color: red;
+.header {
+  background-color: $main-color;
+}
+.footer {
+  background-color: $main-color;
+}
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Mixins: A set of CSS properties, called in a selector using “&#64;include”:</p></li>
+</ul>
+<div class="highlight-scss notranslate"><div class="highlight"><pre><span></span>@mixin theme($theme: DarkGray) {
+  background: $theme;
+  box-shadow: 0 0 1px rgba($theme, .25);
+  color: #fff;
+}
+
+.info {
+  @include theme;
+}
+.alert {
+  @include theme($theme: DarkRed);
+}
+}
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Media queries: With Sass, media queries are nested under selectors, rather than the opposite in CSS:</p></li>
+</ul>
+<div class="highlight-scss notranslate"><div class="highlight"><pre><span></span><span class="nc">.intro</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">display</span><span class="nd">:</span><span class="w"> </span><span class="nt">flex</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">flex-direction</span><span class="nd">:</span><span class="w"> </span><span class="nt">row</span><span class="o">;</span>
+<span class="w">  </span><span class="nt">align-items</span><span class="nd">:</span><span class="w"> </span><span class="nt">flex-start</span><span class="o">;</span>
+
+<span class="w">  </span><span class="o">@</span><span class="nt">media</span><span class="w"> </span><span class="o">(</span><span class="nt">max-width</span><span class="nd">:</span><span class="w"> </span><span class="nt">996px</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">flex-direction</span><span class="nd">:</span><span class="w"> </span><span class="nt">column</span><span class="o">;</span>
+<span class="w">    </span><span class="nt">align-items</span><span class="nd">:</span><span class="w"> </span><span class="nt">center</span><span class="o">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </section>
 </section>
 </section>
@@ -525,20 +532,20 @@ Different properties will modify box aspect and size.</p>
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="css_01_basics.html"
+       href="css_10_bem_basics.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">CSS Basics</p>
+        <p class="prev-next-title">BEM Convention</p>
       </div>
     </a>
     <a class="right-next"
-       href="css_03_cascading.html"
+       href="css_12_animation.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">CSS Cascading</p>
+        <p class="prev-next-title">CSS Animations</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -557,14 +564,9 @@ Different properties will modify box aspect and size.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#css-box-model">CSS Box model</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ways-to-pass-values-to-padding-margin-and-border-width-properties">Ways to pass values to padding, margin and border-width properties</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#css-positioning">CSS positioning</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#position-static">position: static</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#position-relative">position: relative</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#position-absolute">position: absolute</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#position-fixed">position: fixed</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#z-index">z-index</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sass-syntax">.sass syntax</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scss-syntax">scss syntax</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#main-specificities">Main specificities:</a></li>
 </ul>
 </li>
 </ul>
