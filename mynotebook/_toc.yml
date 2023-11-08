@@ -15,12 +15,18 @@ parts:
     - file: html_css_dev/css_06_media_query
     - file: html_css_dev/css_07_flexbox
     - file: html_css_dev/css_08_grid
+    - file: html_css_dev/css_09_bootstrap
+    - file: html_css_dev/css_10_bem_basics
+    - file: html_css_dev/css_11_sass_basics.md
+    - file: html_css_dev/css_12_animation
     - file: html_css_dev/html_boilerplate
     - file: html_css_dev/filepaths_basics
 
   - caption: Javascript ES6
     chapters:
     - file: javascript/js_01_basics
+    - file: javascript/js_02_dom
+    - file: javascript/js_03_POO
 
   - caption: cheatsheets
     chapters:

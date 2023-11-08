@@ -9,7 +9,7 @@ Different properties will modify box aspect and size.
 - Padding: Space between content and border
 - Margin: Space between the border and any other content in the webpage.
 
-<img src="../assets/images/css_boxmodel.png">
+![boxmodel](../assets/images/css_boxmodel.png)
 
 ## Ways to pass values to padding, margin and border-width properties
 
@@ -35,7 +35,7 @@ div{
 }
 ```
 ## CSS positioning
-<img src="../assets/images/css_positions.png" />
+![css-positioning](../assets/images/css_positions.png)
 
 ### position: static
 HTML default flow: elements are placed at the bottom of the previous element.

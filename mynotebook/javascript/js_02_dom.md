@@ -1,5 +1,34 @@
 # DOM: Document Object Model
 
+## Introduction
+Inserting javascript code into a webpage can be done in 3 differents ways, just like CSS: Inline, Internal or External.
+
+### Inline JS
+```html
+<body onload="alert('Some JS here');">
+  <h1>Hello</h1>
+</body>
+```
+
+### Internal JS
+```html
+<body>
+  <h1>Hello</h1>
+  <script type="text/javascript">
+    alert("Some JS here");
+  </script>
+</body>
+```
+### External JS
+```js
+alert("Some JS here");
+```
+```html
+<body>
+  <h1>Hello</h1>
+  <script src="#" charset="utf-8"></script>
+</body>
+```
 ## Retrieve element from tree
 ```js
 document.firstElementChild;
