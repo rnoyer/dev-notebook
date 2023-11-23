@@ -412,6 +412,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methods">Methods</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#text-manipulation">Text Manipulation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elements-manipulation">Elements manipulation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#separation-of-concern">Separation of concern</a></li>
 </ul>
 </li>
 </ul>
@@ -534,6 +535,24 @@ document.write(`
 </pre></div>
 </div>
 </section>
+<section id="separation-of-concern">
+<h3>Separation of concern<a class="headerlink" href="#separation-of-concern" title="Permalink to this heading">#</a></h3>
+<p>In order to change styling with javascript for good reasons (I mean, there is), we have at least 2 options:</p>
+<ul class="simple">
+<li><p>First : The dirty one &gt; Consist in changing directly the style using .style method</p></li>
+</ul>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">fontSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;10rem&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Second : The better one &gt; consist in manipulating classes of an element. Here, styling is kept in CSS, and Javascript only toggle it.</p></li>
+</ul>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;invisible&quot;</span><span class="p">);</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s2">&quot;invisible&quot;</span><span class="p">);</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">toggle</span><span class="p">(</span><span class="s2">&quot;invisible&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
 </section>
 </section>
 
@@ -612,6 +631,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methods">Methods</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#text-manipulation">Text Manipulation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elements-manipulation">Elements manipulation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#separation-of-concern">Separation of concern</a></li>
 </ul>
 </li>
 </ul>
