@@ -88,3 +88,16 @@ document.querySelector("a").getAttribute("href");
 ```js
 document.querySelector("a").setAttribute("href","https://www.bing.com");
 ```
+
+### Separation of concern
+In order to change styling with javascript for good reasons (I mean, there is), we have at least 2 options:
+ - First : The dirty one > Consist in changing directly the style using .style method
+ ```js
+document.querySelector("h1").style.fontSize = "10rem";
+```
+ - Second : The better one > consist in manipulating classes of an element. Here, styling is kept in CSS, and Javascript only toggle it.
+ ```js
+ document.querySelector("button").classList.add("invisible");
+ document.querySelector("button").classList.remove("invisible");
+ document.querySelector("button").classList.toggle("invisible");
+```
