@@ -380,7 +380,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -396,6 +398,30 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pyenv">pyenv</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyenv-install">pyenv install</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyenv-versions">pyenv versions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyenv-local">pyenv local</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pyenv-virtualenv">pyenv-virtualenv</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#list-existing-virtualenvs">List existing virtualenvs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-virtualenv">Create virtualenv</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#activate-deactivate">Activate/deactivate</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#delete-existing-virtualenv">Delete existing virtualenv</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pipenv">pipenv</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-packages">install packages</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -407,6 +433,84 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="pyenv-cheatsheet">
 <h1>pyenv cheatsheet<a class="headerlink" href="#pyenv-cheatsheet" title="Permalink to this heading">#</a></h1>
+<p><a class="reference external" href="https://github.com/yyuu/pyenv">pyenv</a></p>
+<p><a class="reference external" href="https://github.com/yyuu/pyenv-virtualenv">pyenv-virtualenv</a></p>
+<p><a class="reference external" href="https://github.com/yyuu/pyenv/blob/master/COMMANDS.md">Command reference</a></p>
+<section id="pyenv">
+<h2>pyenv<a class="headerlink" href="#pyenv" title="Permalink to this heading">#</a></h2>
+<section id="pyenv-install">
+<h3>pyenv install<a class="headerlink" href="#pyenv-install" title="Permalink to this heading">#</a></h3>
+<p>List available python versions:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    $ pyenv install -l
+</pre></div>
+</div>
+<p>Install Python 3.5.1:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    $ pyenv install 3.5.1
+    $ pyenv rehash
+</pre></div>
+</div>
+</section>
+<section id="pyenv-versions">
+<h3>pyenv versions<a class="headerlink" href="#pyenv-versions" title="Permalink to this heading">#</a></h3>
+<p>List installed versions:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    $ pyenv versions
+</pre></div>
+</div>
+</section>
+<section id="pyenv-local">
+<h3>pyenv local<a class="headerlink" href="#pyenv-local" title="Permalink to this heading">#</a></h3>
+<p>Sets a local application-specific Python version:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    $ pyenv local 2.7.6
+</pre></div>
+</div>
+<p>Unset the local version:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    $ pyenv local --unset
+</pre></div>
+</div>
+</section>
+</section>
+<section id="pyenv-virtualenv">
+<h2>pyenv-virtualenv<a class="headerlink" href="#pyenv-virtualenv" title="Permalink to this heading">#</a></h2>
+<section id="list-existing-virtualenvs">
+<h3>List existing virtualenvs<a class="headerlink" href="#list-existing-virtualenvs" title="Permalink to this heading">#</a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    $ pyenv virtualenvs
+</pre></div>
+</div>
+</section>
+<section id="create-virtualenv">
+<h3>Create virtualenv<a class="headerlink" href="#create-virtualenv" title="Permalink to this heading">#</a></h3>
+<p>From current version with name “venv35”:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    $ pyenv virtualenv venv35
+</pre></div>
+</div>
+<p>From version 2.7.10 with name “venv27”:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    $ pyenv virtualenv 2.7.10 venv27
+</pre></div>
+</div>
+</section>
+<section id="activate-deactivate">
+<h3>Activate/deactivate<a class="headerlink" href="#activate-deactivate" title="Permalink to this heading">#</a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    $ pyenv activate &lt;name&gt;
+    $ pyenv deactivate
+</pre></div>
+</div>
+</section>
+<section id="delete-existing-virtualenv">
+<h3>Delete existing virtualenv<a class="headerlink" href="#delete-existing-virtualenv" title="Permalink to this heading">#</a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    $ pyenv uninstall venv27
+</pre></div>
+</div>
+</section>
+</section>
+<section id="pipenv">
+<h2>pipenv<a class="headerlink" href="#pipenv" title="Permalink to this heading">#</a></h2>
+<section id="install-packages">
+<h3>install packages<a class="headerlink" href="#install-packages" title="Permalink to this heading">#</a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>    $ pipenv install &lt;package_name&gt;
+</pre></div>
+</div>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -463,6 +567,36 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pyenv">pyenv</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyenv-install">pyenv install</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyenv-versions">pyenv versions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyenv-local">pyenv local</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pyenv-virtualenv">pyenv-virtualenv</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#list-existing-virtualenvs">List existing virtualenvs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-virtualenv">Create virtualenv</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#activate-deactivate">Activate/deactivate</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#delete-existing-virtualenv">Delete existing virtualenv</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pipenv">pipenv</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-packages">install packages</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
