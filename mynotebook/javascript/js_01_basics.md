@@ -2,8 +2,9 @@
 
 ## Variable declaration
 ```js
-var foo = "hello" // scoped to the function.
+var foo = "hello" // scoped to the function. (obsolete yet still valid)
 let foo = "hello" // scoped to the immediate enclosing block denoted by { }.
+const bar = "hello" // constante
 ```
 
 ## Data types
@@ -89,7 +90,7 @@ for(startcondition; endcondition; action){
 
 ## Arrays
 ```js
-var myArray = ["a","z","e","r","t","y"];
+let myArray = ["a","z","e","r","t","y"];
 ```
 - Retrieve item by position:
 ```js
@@ -111,7 +112,14 @@ myArray.push("u"); // myArray is updated with a 'u' at its end.
 ```js
 myArray.pop(); // Return the last item and delete it from the list.
 ```
-
+- shallow copy
+```js
+let myCopiedArray = myArray
+```
+- hard copy
+```js
+let myCopiedArray = [...myArray];
+```
 
 ## Common functions
 
