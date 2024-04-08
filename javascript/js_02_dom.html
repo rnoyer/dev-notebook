@@ -409,13 +409,15 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#external-js">External JS</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#retrieve-element-from-tree">Retrieve element from tree</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulate-html">Manipulate HTML</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perform-action">Perform action</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methods">Methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulate-dom">Manipulate DOM</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#retrieve-dom-element">Retrieve DOM element</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-attributes-and-classes">Set attributes and classes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-and-add-new-elements">Create and Add new elements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other">Other</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#text-manipulation">Text Manipulation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elements-manipulation">Elements manipulation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#separation-of-concern">Separation of concern</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#listen-to-event">Listen to event</a></li>
 </ul>
 </li>
 </ul>
@@ -466,43 +468,73 @@ document.write(`
 </div>
 </section>
 </section>
-<section id="retrieve-element-from-tree">
-<h2>Retrieve element from tree<a class="headerlink" href="#retrieve-element-from-tree" title="Permalink to this heading">#</a></h2>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nb">document</span><span class="p">.</span><span class="nx">firstElementChild</span><span class="p">;</span>
-<span class="nb">document</span><span class="p">.</span><span class="nx">firstElementChild</span><span class="p">.</span><span class="nx">firstElementChild</span><span class="p">;</span>
-</pre></div>
-</div>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nb">document</span><span class="p">.</span><span class="nx">lastElementChild</span><span class="p">;</span>
-</pre></div>
-</div>
-</section>
-<section id="manipulate-html">
-<h2>Manipulate HTML<a class="headerlink" href="#manipulate-html" title="Permalink to this heading">#</a></h2>
+<section id="manipulate-dom">
+<h2>Manipulate DOM<a class="headerlink" href="#manipulate-dom" title="Permalink to this heading">#</a></h2>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span><span class="w"> </span><span class="nx">head</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">firstElementChild</span><span class="p">;</span>
 <span class="nx">head</span><span class="p">.</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;foo&quot;</span><span class="p">;</span>
 <span class="nx">head</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;red&quot;</span><span class="p">;</span>
 </pre></div>
 </div>
-</section>
-<section id="perform-action">
-<h2>Perform action<a class="headerlink" href="#perform-action" title="Permalink to this heading">#</a></h2>
+<section id="retrieve-dom-element">
+<h3>Retrieve DOM element<a class="headerlink" href="#retrieve-dom-element" title="Permalink to this heading">#</a></h3>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s2">&quot;li&quot;</span><span class="p">)[</span><span class="mf">0</span><span class="p">];</span>
 <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByClassName</span><span class="p">(</span><span class="s2">&quot;htmlClass&quot;</span><span class="p">)[</span><span class="mf">0</span><span class="p">];</span>
 <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">);</span>
 
 <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;input&quot;</span><span class="p">).</span><span class="nx">click</span><span class="p">();</span>
 <span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;input&quot;</span><span class="p">)[</span><span class="mf">0</span><span class="p">].</span><span class="nx">click</span><span class="p">();</span>
+
+<span class="nb">document</span><span class="p">.</span><span class="nx">firstElementChild</span><span class="p">;</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">firstElementChild</span><span class="p">.</span><span class="nx">firstElementChild</span><span class="p">;</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">lastElementChild</span><span class="p">;</span>
 </pre></div>
 </div>
-<section id="methods">
-<h3>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">#</a></h3>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nx">click</span><span class="p">();</span>
-<span class="p">.</span><span class="nx">appendChild</span><span class="p">();</span>
-<span class="p">.</span><span class="nx">setAttribute</span><span class="p">();</span>
+</section>
+<section id="set-attributes-and-classes">
+<h3>Set attributes and classes<a class="headerlink" href="#set-attributes-and-classes" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Set attributes
+There’s 2 ways to set attributes :</p></li>
+</ul>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// Using setAttribute method : allow to set HTML attributes as well as customs attributes</span>
+<span class="nx">myDOMElement</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">&quot;attributeName&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;attributeValue&quot;</span><span class="p">);</span>
 
-<span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;huge&quot;</span><span class="p">);</span>
+<span class="c1">// Adding any HTML attribute as a parameter</span>
+<span class="nx">myDOMElement</span><span class="p">.</span><span class="nx">attributeName</span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;attributeValue&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Set Classes</p></li>
+</ul>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;huge&quot;</span><span class="p">);</span>
 <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s2">&quot;huge&quot;</span><span class="p">);</span>
 <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">toggle</span><span class="p">(</span><span class="s2">&quot;huge&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="create-and-add-new-elements">
+<h3>Create and Add new elements<a class="headerlink" href="#create-and-add-new-elements" title="Permalink to this heading">#</a></h3>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create un new element, stored in a variable</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">myNewElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">);</span>
+
+<span class="c1">// Retrieve an existing element where to put it under</span>
+<span class="kd">let</span><span class="w"> </span><span class="nx">parentElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">gelElementById</span><span class="p">(</span><span class="s2">&quot;container&quot;</span><span class="p">);</span>
+
+<span class="c1">// Add our new element as a child of parentElement</span>
+<span class="nx">parentElement</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">myNewElement</span><span class="p">);</span>
+
+<span class="c1">// There is multiple methods to add elements</span>
+<span class="nx">parentElement</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">myNewElement</span><span class="p">,</span><span class="w"> </span><span class="nx">anotherNewElement</span><span class="p">)</span><span class="w"> </span><span class="c1">// Add after the last child of parentElement</span>
+</pre></div>
+</div>
+</section>
+<section id="other">
+<h3>Other<a class="headerlink" href="#other" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Other actions</p></li>
+</ul>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nx">click</span><span class="p">();</span>
+<span class="p">.</span><span class="nx">appendChild</span><span class="p">();</span>
 </pre></div>
 </div>
 </section>
@@ -553,6 +585,23 @@ document.write(`
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;invisible&quot;</span><span class="p">);</span>
 <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s2">&quot;invisible&quot;</span><span class="p">);</span>
 <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">toggle</span><span class="p">(</span><span class="s2">&quot;invisible&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="listen-to-event">
+<h3>Listen to event<a class="headerlink" href="#listen-to-event" title="Permalink to this heading">#</a></h3>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// Get an element to Listen to</span>
+<span class="nx">allButtons</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">)</span>
+
+<span class="c1">// Write a function which will be trigger on the event</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">handleClick</span><span class="p">(){</span>
+<span class="w"> </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;clicked&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// The addEventListener method takes 2 params at least :</span>
+<span class="c1">//   1- The type of event ( a click, a mouseover, a change, etc.)</span>
+<span class="c1">//   2- The function to trigger</span>
+<span class="nx">allButtons</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span><span class="nx">handleClick</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
@@ -628,13 +677,15 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#external-js">External JS</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#retrieve-element-from-tree">Retrieve element from tree</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulate-html">Manipulate HTML</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perform-action">Perform action</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methods">Methods</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulate-dom">Manipulate DOM</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#retrieve-dom-element">Retrieve DOM element</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#set-attributes-and-classes">Set attributes and classes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-and-add-new-elements">Create and Add new elements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other">Other</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#text-manipulation">Text Manipulation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elements-manipulation">Elements manipulation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#separation-of-concern">Separation of concern</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#listen-to-event">Listen to event</a></li>
 </ul>
 </li>
 </ul>
