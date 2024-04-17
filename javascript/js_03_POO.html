@@ -403,8 +403,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#constructor-function">Constructor function</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initialize-object">Initialize object</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-an-object">Create an object</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#literal-object">Literal object</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-a-prototype">Using a Prototype</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-class-keyword">Using ‘class’ keyword</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#object-inheritance">Object inheritance</a></li>
 </ul>
             </nav>
         </div>
@@ -418,23 +423,81 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="javascript-object-oriented-programation">
 <h1>Javascript Object Oriented Programation<a class="headerlink" href="#javascript-object-oriented-programation" title="Permalink to this heading">#</a></h1>
-<section id="constructor-function">
-<h2>Constructor function<a class="headerlink" href="#constructor-function" title="Permalink to this heading">#</a></h2>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">HouseKeeper</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span><span class="nx">experience</span><span class="p">,</span><span class="nx">cleaningRep</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">name</span><span class="p">;</span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">experience</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">experience</span><span class="p">;</span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">cleaningRep</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">cleaningRep</span><span class="p">;</span>
+<section id="create-an-object">
+<h2>Create an object<a class="headerlink" href="#create-an-object" title="Permalink to this heading">#</a></h2>
+<p>There is three ways to create an object:</p>
+<section id="literal-object">
+<h3>Literal object<a class="headerlink" href="#literal-object" title="Permalink to this heading">#</a></h3>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">Me</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">firstName</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Romain&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">lastName</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Noyer&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">getFullName</span><span class="o">:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">Me</span><span class="p">.</span><span class="nx">firstName</span><span class="si">}</span><span class="sb"> </span><span class="si">${</span><span class="nx">Me</span><span class="p">.</span><span class="nx">lastName</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">sayHello</span><span class="o">:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hello there&quot;</span><span class="p">)</span>
 <span class="p">}</span>
+
+<span class="c1">// Return first name and last name</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">Me</span><span class="p">.</span><span class="nx">getFullName</span><span class="p">())</span>
+
+<span class="c1">// Says Hello There</span>
+<span class="nx">Me</span><span class="p">.</span><span class="nx">sayHello</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>
-<section id="initialize-object">
-<h2>Initialize object<a class="headerlink" href="#initialize-object" title="Permalink to this heading">#</a></h2>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span><span class="w"> </span><span class="nx">houseKeeper1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">HouseKeeper</span><span class="p">(</span><span class="s2">&quot;Sandra&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,[</span><span class="s2">&quot;bath&quot;</span><span class="p">,</span><span class="s2">&quot;bed&quot;</span><span class="p">,</span><span class="s2">&quot;lobby&quot;</span><span class="p">]);</span>
+<section id="using-a-prototype">
+<h3>Using a Prototype<a class="headerlink" href="#using-a-prototype" title="Permalink to this heading">#</a></h3>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">Me</span><span class="p">(</span><span class="nx">firstName</span><span class="p">,</span><span class="w"> </span><span class="nx">LastName</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">_firstName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">firstName</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">_lastName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">lastName</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">houseKeeper2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">HouseKeeper</span><span class="p">(</span><span class="s2">&quot;Pedro&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,[</span><span class="s2">&quot;floor&quot;</span><span class="p">,</span><span class="s2">&quot;roof&quot;</span><span class="p">,</span><span class="s2">&quot;wall&quot;</span><span class="p">]);</span>
+<span class="p">}</span>
+
+<span class="nx">Me</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">getFullName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="nx">Me</span><span class="p">.</span><span class="nx">firstName</span><span class="si">}</span><span class="sb"> </span><span class="si">${</span><span class="nx">Me</span><span class="p">.</span><span class="nx">lastName</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="nx">Me</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">sayHello</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hello There&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// Instanciate new Me</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">Romain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Me</span><span class="p">(</span><span class="s2">&quot;romain&quot;</span><span class="p">,</span><span class="s2">&quot;noyer&quot;</span><span class="p">)</span>
+<span class="c1">// Return first name and last name</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">Romain</span><span class="p">.</span><span class="nx">getFullName</span><span class="p">())</span>
+<span class="c1">// Says Hello There</span>
+<span class="nx">Romain</span><span class="p">.</span><span class="nx">sayHello</span><span class="p">()</span>
 </pre></div>
 </div>
+</section>
+<section id="using-class-keyword">
+<h3>Using ‘class’ keyword<a class="headerlink" href="#using-class-keyword" title="Permalink to this heading">#</a></h3>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">Me</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">firstName</span><span class="p">,</span><span class="w"> </span><span class="nx">lastName</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">       </span><span class="k">this</span><span class="p">.</span><span class="nx">_firstName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">firstName</span>
+<span class="w">       </span><span class="k">this</span><span class="p">.</span><span class="nx">_lastName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">lastName</span>
+<span class="w">   </span><span class="p">}</span>
+
+<span class="w">   </span><span class="nx">getFullName</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">       </span><span class="k">return</span><span class="w"> </span><span class="sb">`</span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">_firstName</span><span class="si">}</span><span class="sb"> </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">_lastName</span><span class="si">}</span><span class="sb">`</span>
+<span class="w">   </span><span class="p">}</span>
+
+<span class="w">   </span><span class="nx">sayHello</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">       </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hello There&quot;</span><span class="p">)</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Instanciate new Me</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">Romain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Me</span><span class="p">(</span><span class="s2">&quot;romain&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;noyer&quot;</span><span class="p">)</span>
+<span class="c1">// Return first name and last name</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">Romain</span><span class="p">.</span><span class="nx">getFullName</span><span class="p">())</span>
+<span class="c1">// Says Hello There</span>
+<span class="nx">Romain</span><span class="p">.</span><span class="nx">sayHello</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="object-inheritance">
+<h2>Object inheritance<a class="headerlink" href="#object-inheritance" title="Permalink to this heading">#</a></h2>
+<p>Allow an objet to be ‘upgraded’ with all atributes and methods of another object.</p>
 </section>
 </section>
 
@@ -501,8 +564,13 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#constructor-function">Constructor function</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initialize-object">Initialize object</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-an-object">Create an object</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#literal-object">Literal object</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-a-prototype">Using a Prototype</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#using-class-keyword">Using ‘class’ keyword</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#object-inheritance">Object inheritance</a></li>
 </ul>
   </nav></div>
 
