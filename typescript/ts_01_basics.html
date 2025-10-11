@@ -403,10 +403,24 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-types">Les types</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#primitifs">Primitifs</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-arrays">Les Arrays</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#typage-explicite">Typage explicite</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-arrays">Les Arrays</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-fonctions">Les fonctions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fonction-qui-retourne-une-promesse">Fonction qui retourne une promesse</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#type-objet">Type Objet</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#union-types">Union Types</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-alias">Les Alias</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-interfaces">Les interfaces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assertions-de-type">Assertions de type</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-literals">Types litérals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#null-et-undefined"><code class="docutils literal notranslate"><span class="pre">null</span></code> et  <code class="docutils literal notranslate"><span class="pre">undefined</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operateur-d-assertion-non-null">Opérateur d’assertion non-null</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -427,25 +441,13 @@ document.write(`
 <p>Les types primitifs sont les types les plus couramment utilisés : <code class="docutils literal notranslate"><span class="pre">string</span></code>, <code class="docutils literal notranslate"><span class="pre">number</span></code>, <code class="docutils literal notranslate"><span class="pre">boolean</span></code></p>
 <p>TS a également un type <code class="docutils literal notranslate"><span class="pre">any</span></code> qui permet d’éviter les erreurs de type check.</p>
 </section>
-<section id="les-arrays">
-<h3>Les Arrays<a class="headerlink" href="#les-arrays" title="Permalink to this heading">#</a></h3>
-<p>Il est possible de typer les arrays, notamment leur contenu.
-Exemple:</p>
-<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="c1">// un array contenant des nombres</span>
-<span class="kt">number</span><span class="p">[]</span>
-
-<span class="c1">// Ecriture alternative de forme T&lt;U&gt;</span>
-<span class="nb">Array</span><span class="o">&lt;</span><span class="kt">number</span><span class="o">&gt;</span>
-</pre></div>
-</div>
-</section>
 </section>
 <section id="typage-explicite">
 <h2>Typage explicite<a class="headerlink" href="#typage-explicite" title="Permalink to this heading">#</a></h2>
 <p>Les variables sont typées comme suit. Cependant ce n’est généralement pas nécessaire puisque TS déduit le type en fonction du contenu de la variable.</p>
 <div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Jean&quot;</span><span class="p">;</span>
 
-<span class="kd">const</span><span class="w"> </span><span class="nx">message</span><span class="o">=</span><span class="s2">&quot;Coucou&quot;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Coucou&quot;</span><span class="p">;</span>
 <span class="c1">// TS déduira &gt;&gt; const message: string</span>
 </pre></div>
 </div>
@@ -459,6 +461,161 @@ Exemple:</p>
 <span class="nx">sayHello</span><span class="p">(</span><span class="s2">&quot;Bob&quot;</span><span class="p">,</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">())</span><span class="w"> </span><span class="c1">// [✅]</span>
 </pre></div>
 </div>
+</section>
+<section id="les-arrays">
+<h2>Les Arrays<a class="headerlink" href="#les-arrays" title="Permalink to this heading">#</a></h2>
+<p>Il est possible de typer les arrays, notamment leur contenu.
+Exemple:</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="c1">// un array contenant des nombres</span>
+<span class="kt">number</span><span class="p">[]</span>
+
+<span class="c1">// Ecriture alternative de forme T&lt;U&gt;</span>
+<span class="nb">Array</span><span class="o">&lt;</span><span class="kt">number</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="les-fonctions">
+<h2>Les fonctions<a class="headerlink" href="#les-fonctions" title="Permalink to this heading">#</a></h2>
+<p>Comme vu plus haut, il est possible de typer les paramètres, mais il est également possible de typer la sortie d’une fonction:</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">getNumber</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mf">23</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<section id="fonction-qui-retourne-une-promesse">
+<h3>Fonction qui retourne une promesse<a class="headerlink" href="#fonction-qui-retourne-une-promesse" title="Permalink to this heading">#</a></h3>
+<p>Utiliser le type <code class="docutils literal notranslate"><span class="pre">Promise</span></code></p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="k">await</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">getNumber</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="kt">number</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mf">23</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="type-objet">
+<h2>Type Objet<a class="headerlink" href="#type-objet" title="Permalink to this heading">#</a></h2>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">printCoord</span><span class="p">(</span><span class="nx">pt</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">x</span><span class="o">:</span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="o">:</span><span class="kt">number</span><span class="p">}){</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`x coord are </span><span class="si">${</span><span class="nx">pt</span><span class="p">.</span><span class="nx">x</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`y coord are </span><span class="si">${</span><span class="nx">pt</span><span class="p">.</span><span class="nx">y</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">printCoord</span><span class="p">({</span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="kt">4</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="o">:</span><span class="kt">5</span><span class="p">});</span>
+</pre></div>
+</div>
+<p>Une propriété peut être optionnelle.
+Appeler la propriété d’un objet qui n’existe pas retourne <code class="docutils literal notranslate"><span class="pre">undefined</span></code>. Ainsi, dans le cas d’une propriété optionnelle, l’exception doit être gérée.</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">printName</span><span class="p">(</span><span class="nx">infos</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="nx">firstName</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">lastName?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">}){</span>
+<span class="w">  </span><span class="c1">// Below, &#39;?&#39; handle the exception</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">infos</span><span class="p">.</span><span class="nx">lastName</span><span class="o">?</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">());</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="union-types">
+<h2>Union Types<a class="headerlink" href="#union-types" title="Permalink to this heading">#</a></h2>
+<p>Il est possible d’unir plusieurs types pour en créer un nouveau.</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">printId</span><span class="p">(</span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">){</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`my ID is </span><span class="si">${</span><span class="nx">id</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="nx">printId</span><span class="p">(</span><span class="s1">&#39;242&#39;</span><span class="p">)</span><span class="w"> </span><span class="c1">// [✅]</span>
+<span class="nx">printId</span><span class="p">(</span><span class="mf">234</span><span class="p">)</span><span class="w"> </span><span class="c1">// [✅]</span>
+<span class="nx">printId</span><span class="p">({</span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="kt">434</span><span class="p">})</span><span class="w"> </span><span class="c1">// [❎]</span>
+</pre></div>
+</div>
+<p>Ici, le parametre id accepte les <code class="docutils literal notranslate"><span class="pre">number</span></code> et les <code class="docutils literal notranslate"><span class="pre">string</span></code>.
+TS n’autorisera uniquement des opérations valable pour l’ensemble des types de l’union. Pour effectuer des opérations spécifiques a un type, il faut ‘réduire’ l’union a l’aide du code.</p>
+<p>Par exemple en utilisant <code class="docutils literal notranslate"><span class="pre">typeof</span></code>:</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">printId</span><span class="p">(</span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">id</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// In this branch, id is of type &#39;string&#39;</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">id</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">());</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Here, id is of type &#39;number&#39;</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">id</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Ou une fonction comme <code class="docutils literal notranslate"><span class="pre">Array.isArray</span></code></p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">welcomePeople</span><span class="p">(</span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">Array</span><span class="p">.</span><span class="nx">isArray</span><span class="p">(</span><span class="nx">x</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Here: &#39;x&#39; is &#39;string[]&#39;</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hello, &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">x</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">&quot; and &quot;</span><span class="p">));</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Here: &#39;x&#39; is &#39;string&#39;</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Welcome lone traveler &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">x</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="les-alias">
+<h2>Les Alias<a class="headerlink" href="#les-alias" title="Permalink to this heading">#</a></h2>
+<p>Les alias permettent de nommer des types custom (ou non).
+Voici quelques exemples:</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="kr">type</span><span class="w"> </span><span class="nx">Point</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kr">type</span><span class="w"> </span><span class="nx">Id</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kt">string</span>
+
+<span class="kr">type</span><span class="w"> </span><span class="nx">Dummie</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span>
+</pre></div>
+</div>
+</section>
+<section id="les-interfaces">
+<h2>Les interfaces<a class="headerlink" href="#les-interfaces" title="Permalink to this heading">#</a></h2>
+<p>Les interfaces sont une autre manière de déclarer un type <code class="docutils literal notranslate"><span class="pre">object</span></code></p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="kd">interface</span><span class="w"> </span><span class="nx">Point</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Les types <code class="docutils literal notranslate"><span class="pre">Object</span></code> et les interfaces sont très similaires et peuvent être utilisées indiféremment dans la plupart des cas.</p>
+<p>La différence entre les deux est que, une <code class="docutils literal notranslate"><span class="pre">interface</span></code> peut être changée et étendue, à l’instar des <code class="docutils literal notranslate"><span class="pre">types</span></code>.</p>
+</section>
+<section id="assertions-de-type">
+<h2>Assertions de type<a class="headerlink" href="#assertions-de-type" title="Permalink to this heading">#</a></h2>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">myCanvas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;main_canvas&quot;</span><span class="p">)</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">HTMLCanvasElement</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">myCanvas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&lt;</span><span class="nx">HTMLCanvasElement</span><span class="o">&gt;</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;main_canvas&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="types-literals">
+<h2>Types litérals<a class="headerlink" href="#types-literals" title="Permalink to this heading">#</a></h2>
+<p>Une variable <code class="docutils literal notranslate"><span class="pre">const</span></code> ne change jamais de valeur. Ainsi, pour TS, sont type sera la valeur en question:</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">33</span>
+<span class="nx">age</span><span class="p">;</span><span class="w"> </span><span class="c1">// TS déduit que le type de age est &#39;33&#39; </span>
+</pre></div>
+</div>
+<p>Tel quel, cela n’est pas utile. Cependant, il est possible de faire des unions de litéraux. Ainsi, on peut définir un set de valeurs:</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span><span class="w"> </span><span class="nx">printText</span><span class="p">(</span><span class="nx">s</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">alignment</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;left&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;right&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;center&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// ...</span>
+<span class="p">}</span>
+<span class="nx">printText</span><span class="p">(</span><span class="s2">&quot;Hello, world&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;left&quot;</span><span class="p">);</span>
+<span class="nx">printText</span><span class="p">(</span><span class="s2">&quot;G&#39;day, mate&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;middle&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// TS retourne une erreur car &#39;middle&#39; ne fait pas partie du type du paramètre &#39;alignement&#39;</span>
+</pre></div>
+</div>
+<p>Il peut également s’agir de nombres.</p>
+<p>L’union permet de lier des literaux et des non-litéraux (<code class="docutils literal notranslate"><span class="pre">number</span></code>, <code class="docutils literal notranslate"><span class="pre">interface</span></code>, etc.)</p>
+</section>
+<section id="null-et-undefined">
+<h2><code class="docutils literal notranslate"><span class="pre">null</span></code> et  <code class="docutils literal notranslate"><span class="pre">undefined</span></code><a class="headerlink" href="#null-et-undefined" title="Permalink to this heading">#</a></h2>
+<section id="operateur-d-assertion-non-null">
+<h3>Opérateur d’assertion non-null<a class="headerlink" href="#operateur-d-assertion-non-null" title="Permalink to this heading">#</a></h3>
+<p>Il est possible de supprimer <code class="docutils literal notranslate"><span class="pre">null</span></code> et <code class="docutils literal notranslate"><span class="pre">undefined</span></code> d’un type sans faire de check explicite en écrivant <code class="docutils literal notranslate"><span class="pre">!</span></code> juste après une expression.</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">33</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">liveDangerously</span><span class="p">(</span><span class="nx">x?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// No error</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="o">!</span><span class="p">.</span><span class="nx">toFixed</span><span class="p">());</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>A n’utiliser que quand la valeur ne peut pas être <code class="docutils literal notranslate"><span class="pre">null</span></code> ou <code class="docutils literal notranslate"><span class="pre">undefined</span></code>.</p>
+</section>
 </section>
 </section>
 
@@ -509,10 +666,24 @@ Exemple:</p>
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-types">Les types</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#primitifs">Primitifs</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-arrays">Les Arrays</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#typage-explicite">Typage explicite</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-arrays">Les Arrays</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-fonctions">Les fonctions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fonction-qui-retourne-une-promesse">Fonction qui retourne une promesse</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#type-objet">Type Objet</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#union-types">Union Types</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-alias">Les Alias</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-interfaces">Les interfaces</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#assertions-de-type">Assertions de type</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-literals">Types litérals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#null-et-undefined"><code class="docutils literal notranslate"><span class="pre">null</span></code> et  <code class="docutils literal notranslate"><span class="pre">undefined</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operateur-d-assertion-non-null">Opérateur d’assertion non-null</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

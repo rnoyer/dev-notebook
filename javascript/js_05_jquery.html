@@ -401,7 +401,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basics">Basics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basics">Basics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-elements">Selecting elements</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -418,20 +421,42 @@ document.write(`
 <p>Most popular JS library mainly used to shorten code, when it comes to manipulating DOM.</p>
 <section id="basics">
 <h2>Basics<a class="headerlink" href="#basics" title="Permalink to this heading">#</a></h2>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">)</span>
-<span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">)</span>
-
+<section id="selecting-elements">
+<h3>Selecting elements<a class="headerlink" href="#selecting-elements" title="Permalink to this heading">#</a></h3>
+<p>The sign <code class="docutils literal notranslate"><span class="pre">$</span></code> replace <code class="docutils literal notranslate"><span class="pre">document.querySelector</span></code> and <code class="docutils literal notranslate"><span class="pre">document.querySelectorAll</span></code></p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// without jQuery</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">)</span>
+<span class="c1">// with jQuery</span>
 <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">)</span>
 
-<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s2">&quot;font-size&quot;</span><span class="p">)</span>
-
-<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">&quot;font-size&quot;</span><span class="p">)</span>
-
-<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s2">&quot;font-size&quot;</span><span class="p">)</span>
-
-<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">Class</span><span class="p">(</span><span class="s2">&quot;font-size&quot;</span><span class="p">)</span>
+<span class="c1">// without jQuery</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">)</span>
+<span class="c1">// with jQuery</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// Getting CSS property</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s2">&quot;font-size&quot;</span><span class="p">)</span>
+<span class="c1">// Setting CSS property</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s2">&quot;color&quot;</span><span class="p">,</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// Set a class to an element</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">&quot;my-Class another-Class&quot;</span><span class="p">)</span>
+<span class="c1">// Unset a class to an element</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">removeClass</span><span class="p">(</span><span class="s2">&quot;my-Class&quot;</span><span class="p">)</span>
+<span class="c1">// Query if an element has a specific class</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">hasClass</span><span class="p">(</span><span class="s2">&quot;myClass&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// will return a boolean</span>
+</pre></div>
+</div>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// Add text</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+
+<span class="c1">// equivalent of innerHtml (also interpret html tags)</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="s2">&quot;&lt;em&gt;hello&lt;/em&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
 </section>
 </section>
 
@@ -480,7 +505,10 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basics">Basics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basics">Basics</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-elements">Selecting elements</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
