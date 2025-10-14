@@ -27,6 +27,15 @@ parts:
     - file: javascript/js_01_basics
     - file: javascript/js_02_dom
     - file: javascript/js_03_POO
+    - file: javascript/js_05_jquery
+
+  - caption: Node.js
+    chapters:
+      -file: node_01_basics
+
+  - caption: React
+    chapters:
+      -file: r_01_basics
 
   - caption: cheatsheets
     chapters:
