@@ -168,6 +168,13 @@ SET <column to update>
 WHERE <some condition>
 ```
 
+```sql
+-- Example:
+UPDATE items
+SET title = 'café au lait'
+WHERE id = 3
+```
+
 ## Order returned rows
 
 ```sql

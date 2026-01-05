@@ -6,32 +6,41 @@ root: intro
 parts:
   - caption: HTML / CSS
     chapters:
-    - file: html_css_dev/html_basics
-    - file: html_css_dev/css_01_basics
-    - file: html_css_dev/css_02_properties
-    - file: html_css_dev/css_03_cascading
-    - file: html_css_dev/css_04_combining
-    - file: html_css_dev/css_05_display_float_clear_props
-    - file: html_css_dev/css_06_media_query
-    - file: html_css_dev/css_07_flexbox
-    - file: html_css_dev/css_08_grid
-    - file: html_css_dev/css_09_bootstrap
-    - file: html_css_dev/css_10_bem_basics
-    - file: html_css_dev/css_11_sass_basics.md
-    - file: html_css_dev/css_12_animation
-    - file: html_css_dev/html_boilerplate
-    - file: html_css_dev/filepaths_basics
+      - file: html_css_dev/html_basics
+      - file: html_css_dev/css_01_basics
+      - file: html_css_dev/css_02_properties
+      - file: html_css_dev/css_03_cascading
+      - file: html_css_dev/css_04_combining
+      - file: html_css_dev/css_05_display_float_clear_props
+      - file: html_css_dev/css_06_media_query
+      - file: html_css_dev/css_07_flexbox
+      - file: html_css_dev/css_08_grid
+      - file: html_css_dev/css_09_bootstrap
+      - file: html_css_dev/css_10_bem_basics
+      - file: html_css_dev/css_11_sass_basics.md
+      - file: html_css_dev/css_12_animation
+      - file: html_css_dev/html_boilerplate
+      - file: html_css_dev/filepaths_basics
 
   - caption: Javascript ES6
     chapters:
-    - file: javascript/js_01_basics
-    - file: javascript/js_02_dom
-    - file: javascript/js_03_POO
-    - file: javascript/js_05_jquery
+      - file: javascript/js_01_basics
+      - file: javascript/js_02_dom
+      - file: javascript/js_03_POO
+      - file: javascript/js_05_jquery
+      - file: javascript/js_06_json
+
+  - caption: Typescript
+    chapters:
+      -file: ts_01_basics
 
   - caption: Node.js
     chapters:
       -file: node_01_basics
+
+  - caption: SQL
+    chapters:
+      -file: sql_01_basics
 
   - caption: React
     chapters:
@@ -39,16 +48,16 @@ parts:
 
   - caption: cheatsheets
     chapters:
-    - file: cheatsheets/pyenv
-    - file: cheatsheets/git
+      - file: cheatsheets/pyenv
+      - file: cheatsheets/git
 
   - caption: Android development
     chapters:
-    - file: android_dev/kotlin
-    - file: android_dev/flutter
+      - file: android_dev/kotlin
+      - file: android_dev/flutter
 
   - caption: jupyterbook samples
     chapters:
-    - file: sample_content/markdown
-    - file: sample_content/notebooks
-    - file: sample_content/markdown-notebooks
+      - file: sample_content/markdown
+      - file: sample_content/notebooks
+      - file: sample_content/markdown-notebooks
