@@ -32,19 +32,19 @@ parts:
 
   - caption: Typescript
     chapters:
-      -file: ts_01_basics
+      -file: typescript/ts_01_basics
 
   - caption: Node.js
     chapters:
-      -file: node_01_basics
+      -file: nodejs/node_01_basics
 
   - caption: SQL
     chapters:
-      -file: sql_01_basics
+      -file: sql/sql_01_basics
 
   - caption: React
     chapters:
-      -file: r_01_basics
+      -file: react/r_01_basics
 
   - caption: cheatsheets
     chapters:
