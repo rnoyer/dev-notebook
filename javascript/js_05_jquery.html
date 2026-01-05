@@ -65,6 +65,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'javascript/js_05_jquery';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="JSON Format" href="js_06_json.html" />
+    <link rel="prev" title="Javascript Object Oriented Programation" href="js_03_POO.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -186,10 +188,28 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../html_css_dev/filepaths_basics.html">Filepaths Basics</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Javascript ES6</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="js_01_basics.html">Javascript basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="js_02_dom.html">DOM: Document Object Model</a></li>
 <li class="toctree-l1"><a class="reference internal" href="js_03_POO.html">Javascript Object Oriented Programation</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">jQuery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="js_06_json.html">JSON Format</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Typescript</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../typescript/ts_01_basics.html">TypeScript basics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Node.js</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../nodejs/node_01_basics.html">nodejs</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">SQL</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../sql/sql_01_basics.html">Postgres SQL Basics</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">React</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../react/r_01_basics.html">React Basics</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">cheatsheets</span></p>
 <ul class="nav bd-sidenav">
@@ -403,6 +423,12 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basics">Basics</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-elements">Selecting elements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulating-css-elements">Manipulating CSS elements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulating-classes">Manipulating classes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulating-text">Manipulating text</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulating-attributes">Manipulating attributes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulating-event-listeners">Manipulating event listeners</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-remove-html-elements">Add/remove HTML elements</a></li>
 </ul>
 </li>
 </ul>
@@ -435,12 +461,18 @@ document.write(`
 <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+</section>
+<section id="manipulating-css-elements">
+<h3>Manipulating CSS elements<a class="headerlink" href="#manipulating-css-elements" title="Permalink to this heading">#</a></h3>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// Getting CSS property</span>
 <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s2">&quot;font-size&quot;</span><span class="p">)</span>
 <span class="c1">// Setting CSS property</span>
 <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s2">&quot;color&quot;</span><span class="p">,</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+</section>
+<section id="manipulating-classes">
+<h3>Manipulating classes<a class="headerlink" href="#manipulating-classes" title="Permalink to this heading">#</a></h3>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// Set a class to an element</span>
 <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s2">&quot;my-Class another-Class&quot;</span><span class="p">)</span>
 <span class="c1">// Unset a class to an element</span>
@@ -449,11 +481,57 @@ document.write(`
 <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">hasClass</span><span class="p">(</span><span class="s2">&quot;myClass&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// will return a boolean</span>
 </pre></div>
 </div>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// Add text</span>
+</section>
+<section id="manipulating-text">
+<h3>Manipulating text<a class="headerlink" href="#manipulating-text" title="Permalink to this heading">#</a></h3>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// Set text</span>
 <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+<span class="c1">// Get text</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">text</span><span class="p">()</span>
 
 <span class="c1">// equivalent of innerHtml (also interpret html tags)</span>
 <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="s2">&quot;&lt;em&gt;hello&lt;/em&gt;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="manipulating-attributes">
+<h3>Manipulating attributes<a class="headerlink" href="#manipulating-attributes" title="Permalink to this heading">#</a></h3>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// Set attribute</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;href&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;http://www.yahoo.com&quot;</span><span class="p">)</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;class&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;my-Class&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// also works with classes, as it is a regular attribute.</span>
+
+<span class="c1">// Get attributes</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;href&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="manipulating-event-listeners">
+<h3>Manipulating event listeners<a class="headerlink" href="#manipulating-event-listeners" title="Permalink to this heading">#</a></h3>
+<p>There is two way to set event listeners</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">click</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="s2">&quot;clicked!&quot;</span><span class="p">)</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// Here a more concise way, and close to JS. &#39;on&#39; method takes 2 parameters: the event type (click, mouseover, etc.) and the function to execute.</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="s2">&quot;clicked!&quot;</span><span class="p">)</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</section>
+<section id="add-remove-html-elements">
+<h3>Add/remove HTML elements<a class="headerlink" href="#add-remove-html-elements" title="Permalink to this heading">#</a></h3>
+<p>There is four positional method :</p>
+<ul class="simple">
+<li><p>before / after:  Place the new element next to the selected element</p></li>
+<li><p>prepend / append: Place the new element <strong>inside</strong> the selected one, before or after its content.</p></li>
+</ul>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// Add element before another one</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">before</span><span class="p">(</span><span class="s2">&quot;&lt;button&gt;surprise!&lt;/button&quot;</span><span class="p">)</span>
+
+<span class="c1">//remove element</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">remove</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>
@@ -490,6 +568,24 @@ document.write(`
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="js_03_POO.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Javascript Object Oriented Programation</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="js_06_json.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">JSON Format</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -507,6 +603,12 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basics">Basics</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-elements">Selecting elements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulating-css-elements">Manipulating CSS elements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulating-classes">Manipulating classes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulating-text">Manipulating text</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulating-attributes">Manipulating attributes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulating-event-listeners">Manipulating event listeners</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-remove-html-elements">Add/remove HTML elements</a></li>
 </ul>
 </li>
 </ul>
